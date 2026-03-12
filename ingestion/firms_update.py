@@ -8,12 +8,8 @@ MAP_KEY = os.getenv("FIRMS_API_KEY")
 
 # now let's check how many transactions we have
 
-url = f'https://firms.modaps.eosdis.nasa.gov/mapserver/mapkey_status/?MAP_KEY={MAP_KEY}'
-try:
-    response = requests.get(url)
-    data = response.json()
-    df = pd.Series(data)
-    print(df)
-except:
-  # possible error, wrong MAP_KEY value, check for extra quotes, missing letters
-    print("There is an issue with the query. \nTry in your browser: %s" % url)
+# We can also focus on smaller area ex. South Asia and get last 3 days of records
+countries_url = 'https://firms.modaps.eosdis.nasa.gov/api/countries'
+df_countries = pd.read_csv(countries_url, sep=';')
+df_countries
+df_countries.to_csv("data/raw/countries.csv")

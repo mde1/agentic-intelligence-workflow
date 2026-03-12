@@ -64,7 +64,8 @@ CHANNELS = [
     "tg301military",
     "News_of_Donbass",
     "Wor_mil_news",
-    "AlHaqNews"
+    "AlHaqNews",
+    "newrulesgeo"
 ]
 
 # =========================
