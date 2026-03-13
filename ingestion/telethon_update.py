@@ -69,7 +69,8 @@ CHANNELS = [
     "NewsfromSudan",
     "SANANewsEnglish",
     "GeoIndian", 
-    "internationalreporters_org"
+    "internationalreporters_org",
+    "QudsNen"
 ]
 
 # =========================

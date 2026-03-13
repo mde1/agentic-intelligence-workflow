@@ -26,11 +26,13 @@ INTEL_BASE_URL = "http://127.0.0.1:8000"
 class GraphState(TypedDict):
     user_request: str
     request_type: str
-    time_window_hours: int
+    time_window: str                 # "last_hour" | "last_day" | "last_week"
     countries: list[str]
+    event_types: list[str]
     sources_needed: list[str]
-    retrieved_data: dict
-    fused_analysis: dict
+    retrieval_plan: dict[str, Any]
+    retrieved_data: dict[str, Any]
+    fused_analysis: dict[str, Any]
     final_report: str
 
 # -------------------------------------------------------------------
@@ -38,107 +40,120 @@ class GraphState(TypedDict):
 # -------------------------------------------------------------------
 
 def parse_request(state: GraphState) -> GraphState:
-    """
-    Rule-based first pass.
-    Keep this simple before adding an LLM.
-    """
     user_request = state.get("user_request", "").strip()
-    print("PARSE REQUEST SAW:", user_request)
     text = user_request.lower()
 
     request_type = "latest_summary"
     time_window = "last_hour"
-    countries: list[str] = []
-    event_types: list[str] = []
-    sources_needed = ["telegram"]
+    countries = []
+    event_types = []
 
-    # Time window
-    if "last day" in text or "today" in text:
+    if any(x in text for x in ["last day", "today"]):
         time_window = "last_day"
-    elif "last hour" in text:
-        time_window = "last_hour"
+    elif "last week" in text:
+        time_window = "last_week"
 
-    # Request type
-    if "compare" in text or "trend" in text or "last week" in text:
+    if any(x in text for x in ["compare", "trend", "historical", "last week"]):
         request_type = "historical_comparison"
-    elif "anomal" in text or "spike" in text:
+    elif any(x in text for x in ["anomal", "spike", "surge"]):
         request_type = "anomaly_lookup"
-    elif "what happened" in text or "summary" in text:
-        request_type = "latest_summary"
-    elif "last timestamp" in text or "latest timestamp" in text or "most recent message" in text:
+    elif any(x in text for x in ["last timestamp", "latest timestamp", "most recent message"]):
         request_type = "metadata_lookup"
 
-    # Geography
-    country_terms = [
-        "iraq", "ukraine", "israel", "iran", "lebanon",
-        "syria", "palestine", "bahrain", "uae"
-    ]
-    for term in country_terms:
-        if term in text:
-            countries.append(term.title())
+    country_terms = ["iraq", "ukraine", "israel", "iran", "lebanon", "syria", "palestine", "bahrain", "uae"]
+    countries = [term.title() for term in country_terms if term in text]
 
-    # Event types
-    event_terms = [
-        "impact", "interception", "launch", "explosion",
-        "projectile", "siren"
-    ]
-    for term in event_terms:
-        if term in text:
-            event_types.append(term)
-
-    # Sources
-    if "earthquake" in text or "usgs" in text:
-        sources_needed.append("earthquakes")
-    if "stock" in text or "market" in text:
-        sources_needed.append("stocks")
+    event_terms = ["impact", "interception", "launch", "explosion", "projectile", "siren"]
+    event_types = [term for term in event_terms if term in text]
 
     return {
         "request_type": request_type,
         "time_window": time_window,
         "countries": countries,
         "event_types": event_types,
-        "sources_needed": sorted(set(sources_needed)),
     }
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROMPT_PATH = PROJECT_ROOT / "agents" / "prompts" / "planner_prompt.txt"
+SEMANTIC_MODELS_PATH = PROJECT_ROOT / "semantic" / "semantic_models.yml"
+
+def load_prompt(path: str) -> str:
+    with open(path, "r") as f:
+        return f.read()
 # -------------------------------------------------------------------
 # QUERY PLANNER
 # -------------------------------------------------------------------
 
+class PlannerOutput(BaseModel):
+    request_type: str
+    time_window: str
+    countries: list[str] = Field(default_factory=list)
+    event_types: list[str] = Field(default_factory=list)
+    sources_needed: list[str] = Field(default_factory=list)
+
 def plan_queries(state: GraphState) -> GraphState:
-    """
-    Decide which cached endpoints/tables to use.
-    """
-    with open("semantic/semantic_models.yml") as f:
-        semantic_models = yaml.safe_load(f)
-    request_type = state.get("request_type", "latest_summary")
-    time_window = state.get("time_window", "last_hour")
-    countries = state.get("countries", [])
-    event_types = state.get("event_types", [])
-    sources_needed = state.get("sources_needed", ["telegram"])
+    semantic_models = yaml.safe_load(SEMANTIC_MODELS_PATH.read_text(encoding="utf-8"))
+    semantic_context = yaml.dump(semantic_models, sort_keys=False)
 
-    use_recent_clusters = request_type in {"latest_summary", "anomaly_lookup"}
-    use_hourly_anomalies = True
-    use_stock_alerts = "stocks" in sources_needed
-    use_earthquakes = "earthquakes" in sources_needed
+    raw_template = load_prompt(PROMPT_PATH)
+    planner_prompt = raw_template.format(semantic_context=semantic_context)
 
-    # For now, keep historical requests on cached data too.
-    # Later you can branch to a custom historical analysis node.
-    requires_custom_analysis = False
+    user_request = state.get("user_request", "")
+    parsed_request_type = state.get("request_type", "latest_summary")
+    parsed_time_window = state.get("time_window", "last_hour")
+    parsed_countries = state.get("countries", [])
+    parsed_event_types = state.get("event_types", [])
+
+    llm = ChatOpenAI(model="gpt-4.1-mini", temperature=0)
+    structured_llm = llm.with_structured_output(PlannerOutput, method="json_schema")
+
+    planner_input = f"""
+User request: {user_request}
+
+Current parser hints:
+- request_type: {parsed_request_type}
+- time_window: {parsed_time_window}
+- countries: {parsed_countries}
+- event_types: {parsed_event_types}
+
+Return the best retrieval plan JSON.
+""".strip()
+
+    plan = structured_llm.invoke([
+        {"role": "system", "content": planner_prompt},
+        {"role": "user", "content": planner_input},
+    ]).model_dump()
+
+    request_type = plan["request_type"]
+    time_window = plan["time_window"]
+    countries = plan.get("countries", [])
+    event_types = plan.get("event_types", [])
+    sources_needed = plan.get("sources_needed", [])
 
     retrieval_plan = {
-        "cluster_window": time_window if time_window in {"last_hour", "last_day"} else "last_hour",
-        "cluster_level": "country" if countries else "location",
+        "request_type": request_type,
+        "time_window": time_window,
         "countries": countries,
         "event_types": event_types,
-        "use_recent_clusters": use_recent_clusters,
-        "use_hourly_anomalies": use_hourly_anomalies,
-        "use_stock_alerts": use_stock_alerts,
-        "use_earthquakes": use_earthquakes,
-        "requires_custom_analysis": requires_custom_analysis,
+        "sources_needed": sources_needed,
+        "cluster_window": time_window if time_window in {"last_hour", "last_day", "last_week"} else "last_hour",
+        "cluster_level": "country" if countries else "location",
+        "use_recent_clusters": request_type in {"latest_summary", "anomaly_lookup", "historical_comparison"},
+        "use_hourly_anomalies": request_type in {"latest_summary", "anomaly_lookup", "historical_comparison"},
+        "use_stock_alerts": "stocks" in sources_needed,
+        "use_earthquakes": "earthquakes" in sources_needed,
+        "requires_custom_analysis": request_type == "historical_comparison",
     }
 
-    return {"retrieval_plan": retrieval_plan}
+    return {
+        "request_type": request_type,
+        "time_window": time_window,
+        "countries": countries,
+        "event_types": event_types,
+        "sources_needed": sources_needed,
+        "retrieval_plan": retrieval_plan,
+    }
 
 
 # -------------------------------------------------------------------
@@ -249,6 +264,7 @@ def fuse_findings(state: GraphState) -> GraphState:
         - clearly state uncertainty
         - produce concise analyst-style findings
         - group findings by region
+        - add a final paragraph speculating vulnerabilities or chain reactions that could occur as a result of the latest developments.
 
         Rules:
         - Prefer developments supported by multiple indicators
@@ -258,6 +274,7 @@ def fuse_findings(state: GraphState) -> GraphState:
         - Return no more than 15 findings
         - Confidence must be one of: high, medium, low
         - Compare the current developments with a summary of the last several hours
+        - Specify the latest timestamp of the message_date
         """
 
     human_prompt = f"""
@@ -378,7 +395,7 @@ def save_graph_visualization():
 
 if __name__ == "__main__":
     result = graph.invoke(
-        {"user_request": "What is the last timestamp in today's messages?"}
+        {"user_request": "What's happening today?"}
     )
     save_graph_visualization()
     #print("\n=== RESULT TYPE ===")

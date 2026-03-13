@@ -2476,3 +2476,3404 @@ Flagged 0 anomalies for latest hour
 Finished pipeline: Realtime Pipeline
 ==============================
 All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46757
+TPOnow: fetching messages after ID 46757
+Inserted 0 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836777
+me_observer_TG: fetching messages after ID 836777
+Inserted 41 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56304
+rnintel: fetching messages after ID 56304
+Inserted 0 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177512
+DDGeopolitics: fetching messages after ID 177512
+Inserted 3 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43226
+RezistanceTrench1: fetching messages after ID 43226
+Inserted 2 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74088
+tabzlive: fetching messages after ID 74088
+Inserted 4 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179748
+presstv: fetching messages after ID 179748
+Inserted 2 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79465
+wfwitness: fetching messages after ID 79465
+Inserted 5 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17000
+idfofficial: fetching messages after ID 17000
+Inserted 0 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12634
+FrontlineReportNews: fetching messages after ID 12634
+Inserted 0 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75570
+ClashReport: fetching messages after ID 75570
+Inserted 2 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71316
+CIG_telegram: fetching messages after ID 71316
+Inserted 2 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65981
+wc_israel: fetching messages after ID 65981
+Inserted 2 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72468
+beholdisraelchannel: fetching messages after ID 72468
+Inserted 0 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58171
+LebUpdate: fetching messages after ID 58171
+Inserted 2 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19926
+FotrosResistancee: fetching messages after ID 19926
+Inserted 0 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19936
+VigilantFox: fetching messages after ID 19936
+Inserted 1 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54141
+thecradlemedia: fetching messages after ID 54141
+Inserted 2 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129250
+SGTnewsNetwork: fetching messages after ID 129250
+Inserted 5 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29045
+GeoPWatch: fetching messages after ID 29045
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3784
+OSINTWarfare: fetching messages after ID 3784
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105106
+aljazeera_world: fetching messages after ID 105106
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168354
+BellumActaNews: fetching messages after ID 168354
+Inserted 1 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37080
+medmannews: fetching messages after ID 37080
+Inserted 0 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25568
+gaza911o: fetching messages after ID 25568
+Inserted 0 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13694
+ThePakistanNews: fetching messages after ID 13694
+Inserted 3 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84677
+intelslava: fetching messages after ID 84677
+Inserted 1 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69381
+sinembargomx: fetching messages after ID 69381
+Inserted 0 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120917
+wartimedia: fetching messages after ID 120917
+Inserted 3 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42176
+warmonitors: fetching messages after ID 42176
+Inserted 0 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33115
+irna_en: fetching messages after ID 33115
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 627
+SimurghRes: fetching messages after ID 627
+Inserted 0 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29546
+AlHaqNews: fetching messages after ID 29546
+Inserted 3 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70116
+SANANewsEnglish: fetching messages after ID 70116
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13729
+GeoIndian: fetching messages after ID 13729
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+[OK] Telegram Update completed in 79.15s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -152.706000  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+1 -122.563332  38.348835  ...  earthquake 2026-03-13 16:23:57.930
+2 -152.292000  61.117000  ...  earthquake 2026-03-13 15:49:32.731
+3 -104.360000  31.659000  ...  earthquake 2026-03-13 15:32:56.052
+4 -156.050000  58.375000  ...  earthquake 2026-03-13 15:32:53.623
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.34s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11621 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 8.30s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 98 clusters
+last_hour / country: wrote 98 clusters
+last_day / location: wrote 1596 clusters
+last_day / country: wrote 1562 clusters
+[OK] Build Recent Clusters completed in 5.37s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 21 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.67s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46757
+TPOnow: fetching messages after ID 46757
+Inserted 0 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836818
+me_observer_TG: fetching messages after ID 836818
+Inserted 34 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56304
+rnintel: fetching messages after ID 56304
+Inserted 0 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177515
+DDGeopolitics: fetching messages after ID 177515
+Inserted 2 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43228
+RezistanceTrench1: fetching messages after ID 43228
+Inserted 1 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74092
+tabzlive: fetching messages after ID 74092
+Inserted 3 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179750
+presstv: fetching messages after ID 179750
+Inserted 1 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79470
+wfwitness: fetching messages after ID 79470
+Inserted 10 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17000
+idfofficial: fetching messages after ID 17000
+Inserted 1 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12634
+FrontlineReportNews: fetching messages after ID 12634
+Inserted 1 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75572
+ClashReport: fetching messages after ID 75572
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71318
+CIG_telegram: fetching messages after ID 71318
+Inserted 1 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65983
+wc_israel: fetching messages after ID 65983
+Inserted 2 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72468
+beholdisraelchannel: fetching messages after ID 72468
+Inserted 1 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58173
+LebUpdate: fetching messages after ID 58173
+Inserted 0 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19926
+FotrosResistancee: fetching messages after ID 19926
+Inserted 0 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19937
+VigilantFox: fetching messages after ID 19937
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54143
+thecradlemedia: fetching messages after ID 54143
+Inserted 0 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129255
+SGTnewsNetwork: fetching messages after ID 129255
+Inserted 4 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29045
+GeoPWatch: fetching messages after ID 29045
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3784
+OSINTWarfare: fetching messages after ID 3784
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105106
+aljazeera_world: fetching messages after ID 105106
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168355
+BellumActaNews: fetching messages after ID 168355
+Inserted 0 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37080
+medmannews: fetching messages after ID 37080
+Inserted 0 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25568
+gaza911o: fetching messages after ID 25568
+Inserted 3 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13697
+ThePakistanNews: fetching messages after ID 13697
+Inserted 0 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84678
+intelslava: fetching messages after ID 84678
+Inserted 0 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69381
+sinembargomx: fetching messages after ID 69381
+Inserted 1 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120920
+wartimedia: fetching messages after ID 120920
+Inserted 4 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42176
+warmonitors: fetching messages after ID 42176
+Inserted 1 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33115
+irna_en: fetching messages after ID 33115
+Inserted 1 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 627
+SimurghRes: fetching messages after ID 627
+Inserted 0 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29549
+AlHaqNews: fetching messages after ID 29549
+Inserted 0 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70116
+SANANewsEnglish: fetching messages after ID 70116
+Inserted 2 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13729
+GeoIndian: fetching messages after ID 13729
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+[OK] Telegram Update completed in 79.09s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -152.706000  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+1 -122.563332  38.348835  ...  earthquake 2026-03-13 16:23:57.930
+2  179.434100 -34.473800  ...  earthquake 2026-03-13 16:15:43.953
+3   69.809700  36.610100  ...  earthquake 2026-03-13 16:10:20.654
+4 -152.292000  61.117000  ...  earthquake 2026-03-13 15:49:32.731
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 2.03s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11623 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 15.65s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 72 clusters
+last_hour / country: wrote 72 clusters
+last_day / location: wrote 1598 clusters
+last_day / country: wrote 1564 clusters
+[OK] Build Recent Clusters completed in 5.87s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 23 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.78s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46757
+TPOnow: fetching messages after ID 46757
+Inserted 2 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836855
+me_observer_TG: fetching messages after ID 836855
+Inserted 25 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56304
+rnintel: fetching messages after ID 56304
+Inserted 0 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177517
+DDGeopolitics: fetching messages after ID 177517
+Inserted 2 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43229
+RezistanceTrench1: fetching messages after ID 43229
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74095
+tabzlive: fetching messages after ID 74095
+Inserted 3 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179751
+presstv: fetching messages after ID 179751
+Inserted 1 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79480
+wfwitness: fetching messages after ID 79480
+Inserted 3 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17001
+idfofficial: fetching messages after ID 17001
+Inserted 1 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12635
+FrontlineReportNews: fetching messages after ID 12635
+Inserted 1 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75572
+ClashReport: fetching messages after ID 75572
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71319
+CIG_telegram: fetching messages after ID 71319
+Inserted 0 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65985
+wc_israel: fetching messages after ID 65985
+Inserted 0 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72469
+beholdisraelchannel: fetching messages after ID 72469
+Inserted 1 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58173
+LebUpdate: fetching messages after ID 58173
+Inserted 2 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19926
+FotrosResistancee: fetching messages after ID 19926
+Inserted 0 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19937
+VigilantFox: fetching messages after ID 19937
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54143
+thecradlemedia: fetching messages after ID 54143
+Inserted 0 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129259
+SGTnewsNetwork: fetching messages after ID 129259
+Inserted 5 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29045
+GeoPWatch: fetching messages after ID 29045
+Inserted 1 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3784
+OSINTWarfare: fetching messages after ID 3784
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105106
+aljazeera_world: fetching messages after ID 105106
+Inserted 3 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168355
+BellumActaNews: fetching messages after ID 168355
+Inserted 0 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37080
+medmannews: fetching messages after ID 37080
+Inserted 2 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25571
+gaza911o: fetching messages after ID 25571
+Inserted 1 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13697
+ThePakistanNews: fetching messages after ID 13697
+Inserted 2 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84678
+intelslava: fetching messages after ID 84678
+Inserted 1 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69382
+sinembargomx: fetching messages after ID 69382
+Inserted 0 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120924
+wartimedia: fetching messages after ID 120924
+Inserted 2 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42177
+warmonitors: fetching messages after ID 42177
+Inserted 0 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 627
+SimurghRes: fetching messages after ID 627
+Inserted 6 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29549
+AlHaqNews: fetching messages after ID 29549
+Inserted 0 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70118
+SANANewsEnglish: fetching messages after ID 70118
+Inserted 2 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13729
+GeoIndian: fetching messages after ID 13729
+Inserted 5 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+[OK] Telegram Update completed in 80.44s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -152.706000  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+1 -122.563332  38.348835  ...  earthquake 2026-03-13 16:23:57.930
+2  179.434100 -34.473800  ...  earthquake 2026-03-13 16:15:43.953
+3   69.809700  36.610100  ...  earthquake 2026-03-13 16:10:20.654
+4 -152.292000  61.117000  ...  earthquake 2026-03-13 15:49:32.731
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.91s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11624 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 15.94s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 63 clusters
+last_hour / country: wrote 63 clusters
+last_day / location: wrote 1597 clusters
+last_day / country: wrote 1563 clusters
+[OK] Build Recent Clusters completed in 5.36s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 24 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.55s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46759
+TPOnow: fetching messages after ID 46759
+Inserted 1 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836880
+me_observer_TG: fetching messages after ID 836880
+Inserted 28 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56304
+rnintel: fetching messages after ID 56304
+Inserted 0 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177519
+DDGeopolitics: fetching messages after ID 177519
+Inserted 1 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43229
+RezistanceTrench1: fetching messages after ID 43229
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74098
+tabzlive: fetching messages after ID 74098
+Inserted 2 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179752
+presstv: fetching messages after ID 179752
+Inserted 1 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79483
+wfwitness: fetching messages after ID 79483
+Inserted 2 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17002
+idfofficial: fetching messages after ID 17002
+Inserted 1 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12636
+FrontlineReportNews: fetching messages after ID 12636
+Inserted 2 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75572
+ClashReport: fetching messages after ID 75572
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71319
+CIG_telegram: fetching messages after ID 71319
+Inserted 0 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65985
+wc_israel: fetching messages after ID 65985
+Inserted 2 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72470
+beholdisraelchannel: fetching messages after ID 72470
+Inserted 0 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58175
+LebUpdate: fetching messages after ID 58175
+Inserted 5 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19926
+FotrosResistancee: fetching messages after ID 19926
+Inserted 2 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19937
+VigilantFox: fetching messages after ID 19937
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54143
+thecradlemedia: fetching messages after ID 54143
+Inserted 2 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129264
+SGTnewsNetwork: fetching messages after ID 129264
+Inserted 3 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29046
+GeoPWatch: fetching messages after ID 29046
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3784
+OSINTWarfare: fetching messages after ID 3784
+Inserted 1 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105109
+aljazeera_world: fetching messages after ID 105109
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168355
+BellumActaNews: fetching messages after ID 168355
+Inserted 0 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37083
+medmannews: fetching messages after ID 37083
+Inserted 2 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25572
+gaza911o: fetching messages after ID 25572
+Inserted 1 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13699
+ThePakistanNews: fetching messages after ID 13699
+Inserted 0 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84679
+intelslava: fetching messages after ID 84679
+Inserted 0 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69382
+sinembargomx: fetching messages after ID 69382
+Inserted 2 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120926
+wartimedia: fetching messages after ID 120926
+Inserted 5 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42177
+warmonitors: fetching messages after ID 42177
+Inserted 1 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 633
+SimurghRes: fetching messages after ID 633
+Inserted 4 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29549
+AlHaqNews: fetching messages after ID 29549
+Inserted 0 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70120
+SANANewsEnglish: fetching messages after ID 70120
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13734
+GeoIndian: fetching messages after ID 13734
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = None
+QudsNen: no history found, pulling last 3000
+Inserted 3000 rows for QudsNen
+[OK] Telegram Update completed in 138.82s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -152.706000  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+1 -122.563332  38.348835  ...  earthquake 2026-03-13 16:23:57.930
+2  179.434100 -34.473800  ...  earthquake 2026-03-13 16:15:43.953
+3   69.809700  36.610100  ...  earthquake 2026-03-13 16:10:20.654
+4 -152.292000  61.117000  ...  earthquake 2026-03-13 15:49:32.731
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 2.05s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11731 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 15.09s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 65 clusters
+last_hour / country: wrote 65 clusters
+last_day / location: wrote 1624 clusters
+last_day / country: wrote 1591 clusters
+[OK] Build Recent Clusters completed in 4.35s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 10 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.18s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46760
+TPOnow: fetching messages after ID 46760
+Inserted 0 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836908
+me_observer_TG: fetching messages after ID 836908
+Inserted 48 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56304
+rnintel: fetching messages after ID 56304
+Inserted 0 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177520
+DDGeopolitics: fetching messages after ID 177520
+Inserted 1 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43229
+RezistanceTrench1: fetching messages after ID 43229
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74100
+tabzlive: fetching messages after ID 74100
+Inserted 6 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179753
+presstv: fetching messages after ID 179753
+Inserted 4 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79485
+wfwitness: fetching messages after ID 79485
+Inserted 2 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17003
+idfofficial: fetching messages after ID 17003
+Inserted 1 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12638
+FrontlineReportNews: fetching messages after ID 12638
+Inserted 0 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75572
+ClashReport: fetching messages after ID 75572
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71319
+CIG_telegram: fetching messages after ID 71319
+Inserted 3 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65987
+wc_israel: fetching messages after ID 65987
+Inserted 1 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72470
+beholdisraelchannel: fetching messages after ID 72470
+Inserted 0 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58180
+LebUpdate: fetching messages after ID 58180
+Inserted 1 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19928
+FotrosResistancee: fetching messages after ID 19928
+Inserted 0 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19937
+VigilantFox: fetching messages after ID 19937
+Inserted 1 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54145
+thecradlemedia: fetching messages after ID 54145
+Inserted 0 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129267
+SGTnewsNetwork: fetching messages after ID 129267
+Inserted 2 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29046
+GeoPWatch: fetching messages after ID 29046
+Inserted 1 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3785
+OSINTWarfare: fetching messages after ID 3785
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105109
+aljazeera_world: fetching messages after ID 105109
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168355
+BellumActaNews: fetching messages after ID 168355
+Inserted 0 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37085
+medmannews: fetching messages after ID 37085
+Inserted 2 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25573
+gaza911o: fetching messages after ID 25573
+Inserted 0 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13699
+ThePakistanNews: fetching messages after ID 13699
+Inserted 1 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84679
+intelslava: fetching messages after ID 84679
+Inserted 0 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69384
+sinembargomx: fetching messages after ID 69384
+Inserted 0 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120931
+wartimedia: fetching messages after ID 120931
+Inserted 2 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42178
+warmonitors: fetching messages after ID 42178
+Inserted 1 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 637
+SimurghRes: fetching messages after ID 637
+Inserted 6 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29549
+AlHaqNews: fetching messages after ID 29549
+Inserted 0 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70120
+SANANewsEnglish: fetching messages after ID 70120
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13734
+GeoIndian: fetching messages after ID 13734
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = 213771
+QudsNen: fetching messages after ID 213771
+Inserted 3 rows for QudsNen
+[OK] Telegram Update completed in 78.91s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -152.706000  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+1 -122.563332  38.348835  ...  earthquake 2026-03-13 16:23:57.930
+2  179.434100 -34.473800  ...  earthquake 2026-03-13 16:15:43.953
+3   69.809700  36.610100  ...  earthquake 2026-03-13 16:10:20.654
+4 -152.292000  61.117000  ...  earthquake 2026-03-13 15:49:32.731
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.61s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11739 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 12.88s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 59 clusters
+last_hour / country: wrote 59 clusters
+last_day / location: wrote 1623 clusters
+last_day / country: wrote 1590 clusters
+[OK] Build Recent Clusters completed in 5.11s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 18 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 0.91s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46760
+TPOnow: fetching messages after ID 46760
+Inserted 3 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836956
+me_observer_TG: fetching messages after ID 836956
+Inserted 37 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56304
+rnintel: fetching messages after ID 56304
+Inserted 3 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177521
+DDGeopolitics: fetching messages after ID 177521
+Inserted 0 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43229
+RezistanceTrench1: fetching messages after ID 43229
+Inserted 1 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74110
+tabzlive: fetching messages after ID 74110
+Inserted 3 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179757
+presstv: fetching messages after ID 179757
+Inserted 2 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79487
+wfwitness: fetching messages after ID 79487
+Inserted 6 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17004
+idfofficial: fetching messages after ID 17004
+Inserted 2 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12638
+FrontlineReportNews: fetching messages after ID 12638
+Inserted 2 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75572
+ClashReport: fetching messages after ID 75572
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71322
+CIG_telegram: fetching messages after ID 71322
+Inserted 3 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65988
+wc_israel: fetching messages after ID 65988
+Inserted 0 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72470
+beholdisraelchannel: fetching messages after ID 72470
+Inserted 4 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58181
+LebUpdate: fetching messages after ID 58181
+Inserted 0 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19928
+FotrosResistancee: fetching messages after ID 19928
+Inserted 2 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19938
+VigilantFox: fetching messages after ID 19938
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54145
+thecradlemedia: fetching messages after ID 54145
+Inserted 3 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129270
+SGTnewsNetwork: fetching messages after ID 129270
+Inserted 4 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29047
+GeoPWatch: fetching messages after ID 29047
+Inserted 1 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3785
+OSINTWarfare: fetching messages after ID 3785
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105109
+aljazeera_world: fetching messages after ID 105109
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168355
+BellumActaNews: fetching messages after ID 168355
+Inserted 6 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37087
+medmannews: fetching messages after ID 37087
+Inserted 0 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25573
+gaza911o: fetching messages after ID 25573
+Inserted 0 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13700
+ThePakistanNews: fetching messages after ID 13700
+Inserted 1 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84679
+intelslava: fetching messages after ID 84679
+Inserted 4 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69384
+sinembargomx: fetching messages after ID 69384
+Inserted 0 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120933
+wartimedia: fetching messages after ID 120933
+Inserted 1 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42179
+warmonitors: fetching messages after ID 42179
+Inserted 3 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 643
+SimurghRes: fetching messages after ID 643
+Inserted 6 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29549
+AlHaqNews: fetching messages after ID 29549
+Inserted 2 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70120
+SANANewsEnglish: fetching messages after ID 70120
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13734
+GeoIndian: fetching messages after ID 13734
+Inserted 3 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = 213775
+QudsNen: fetching messages after ID 213775
+Inserted 1 rows for QudsNen
+[OK] Telegram Update completed in 80.46s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -147.263000  60.713000  ...  earthquake 2026-03-13 17:43:47.719
+1 -103.932000  31.431000  ...  earthquake 2026-03-13 17:39:50.734
+2 -117.040000  33.884333  ...  earthquake 2026-03-13 17:38:17.840
+3 -152.706000  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+4 -122.563332  38.348835  ...  earthquake 2026-03-13 16:23:57.930
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 2.14s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11751 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 16.00s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 81 clusters
+last_hour / country: wrote 79 clusters
+last_day / location: wrote 1646 clusters
+last_day / country: wrote 1611 clusters
+[OK] Build Recent Clusters completed in 5.56s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 30 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.72s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46763
+TPOnow: fetching messages after ID 46763
+Inserted 0 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 836993
+me_observer_TG: fetching messages after ID 836993
+Inserted 52 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56307
+rnintel: fetching messages after ID 56307
+Inserted 1 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177521
+DDGeopolitics: fetching messages after ID 177521
+Inserted 2 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43230
+RezistanceTrench1: fetching messages after ID 43230
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74113
+tabzlive: fetching messages after ID 74113
+Inserted 8 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179759
+presstv: fetching messages after ID 179759
+Inserted 3 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79495
+wfwitness: fetching messages after ID 79495
+Inserted 5 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17006
+idfofficial: fetching messages after ID 17006
+Inserted 0 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12640
+FrontlineReportNews: fetching messages after ID 12640
+Inserted 0 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75572
+ClashReport: fetching messages after ID 75572
+Inserted 7 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71325
+CIG_telegram: fetching messages after ID 71325
+Inserted 1 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65988
+wc_israel: fetching messages after ID 65988
+Inserted 1 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72474
+beholdisraelchannel: fetching messages after ID 72474
+Inserted 0 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58181
+LebUpdate: fetching messages after ID 58181
+Inserted 0 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19930
+FotrosResistancee: fetching messages after ID 19930
+Inserted 2 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19938
+VigilantFox: fetching messages after ID 19938
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54148
+thecradlemedia: fetching messages after ID 54148
+Inserted 1 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129274
+SGTnewsNetwork: fetching messages after ID 129274
+Inserted 2 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29048
+GeoPWatch: fetching messages after ID 29048
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3785
+OSINTWarfare: fetching messages after ID 3785
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105109
+aljazeera_world: fetching messages after ID 105109
+Inserted 3 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168361
+BellumActaNews: fetching messages after ID 168361
+Inserted 2 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37087
+medmannews: fetching messages after ID 37087
+Inserted 0 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25573
+gaza911o: fetching messages after ID 25573
+Inserted 1 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13702
+ThePakistanNews: fetching messages after ID 13702
+Inserted 0 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22250
+hnaftali: fetching messages after ID 22250
+Inserted 1 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84683
+intelslava: fetching messages after ID 84683
+Inserted 0 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69384
+sinembargomx: fetching messages after ID 69384
+Inserted 1 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120934
+wartimedia: fetching messages after ID 120934
+Inserted 1 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42182
+warmonitors: fetching messages after ID 42182
+Inserted 4 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 650
+SimurghRes: fetching messages after ID 650
+Inserted 7 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29552
+AlHaqNews: fetching messages after ID 29552
+Inserted 8 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1616
+newrulesgeo: fetching messages after ID 1616
+Inserted 1 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70120
+SANANewsEnglish: fetching messages after ID 70120
+Inserted 1 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13737
+GeoIndian: fetching messages after ID 13737
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = 213776
+QudsNen: fetching messages after ID 213776
+Inserted 1 rows for QudsNen
+[OK] Telegram Update completed in 80.22s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0   -101.919  32.107000  ...  earthquake 2026-03-13 17:49:14.264
+1   -147.263  60.713000  ...  earthquake 2026-03-13 17:43:47.719
+2   -103.932  31.431000  ...  earthquake 2026-03-13 17:39:50.734
+3   -117.040  33.884333  ...  earthquake 2026-03-13 17:38:17.840
+4   -152.706  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.15s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11753 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 11.58s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 91 clusters
+last_hour / country: wrote 88 clusters
+last_day / location: wrote 1653 clusters
+last_day / country: wrote 1617 clusters
+[OK] Build Recent Clusters completed in 4.87s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 1 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 0.99s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46763
+TPOnow: fetching messages after ID 46763
+Inserted 0 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 837045
+me_observer_TG: fetching messages after ID 837045
+Inserted 38 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56308
+rnintel: fetching messages after ID 56308
+Inserted 2 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177523
+DDGeopolitics: fetching messages after ID 177523
+Inserted 9 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43230
+RezistanceTrench1: fetching messages after ID 43230
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74121
+tabzlive: fetching messages after ID 74121
+Inserted 4 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179762
+presstv: fetching messages after ID 179762
+Inserted 0 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79501
+wfwitness: fetching messages after ID 79501
+Inserted 4 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17006
+idfofficial: fetching messages after ID 17006
+Inserted 0 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12640
+FrontlineReportNews: fetching messages after ID 12640
+Inserted 0 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75579
+ClashReport: fetching messages after ID 75579
+Inserted 4 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71326
+CIG_telegram: fetching messages after ID 71326
+Inserted 3 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65989
+wc_israel: fetching messages after ID 65989
+Inserted 5 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72474
+beholdisraelchannel: fetching messages after ID 72474
+Inserted 0 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58181
+LebUpdate: fetching messages after ID 58181
+Inserted 0 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19932
+FotrosResistancee: fetching messages after ID 19932
+Inserted 1 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19938
+VigilantFox: fetching messages after ID 19938
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54149
+thecradlemedia: fetching messages after ID 54149
+Inserted 1 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129276
+SGTnewsNetwork: fetching messages after ID 129276
+Inserted 1 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29048
+GeoPWatch: fetching messages after ID 29048
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3785
+OSINTWarfare: fetching messages after ID 3785
+Inserted 4 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105112
+aljazeera_world: fetching messages after ID 105112
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168363
+BellumActaNews: fetching messages after ID 168363
+Inserted 0 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37087
+medmannews: fetching messages after ID 37087
+Inserted 2 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25574
+gaza911o: fetching messages after ID 25574
+Inserted 1 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13702
+ThePakistanNews: fetching messages after ID 13702
+Inserted 0 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22251
+hnaftali: fetching messages after ID 22251
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84683
+intelslava: fetching messages after ID 84683
+Inserted 0 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69385
+sinembargomx: fetching messages after ID 69385
+Inserted 0 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120935
+wartimedia: fetching messages after ID 120935
+Inserted 1 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42186
+warmonitors: fetching messages after ID 42186
+Inserted 0 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 658
+SimurghRes: fetching messages after ID 658
+Inserted 4 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8663
+tg301military: fetching messages after ID 8663
+Inserted 1 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29560
+AlHaqNews: fetching messages after ID 29560
+Inserted 6 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1617
+newrulesgeo: fetching messages after ID 1617
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70121
+SANANewsEnglish: fetching messages after ID 70121
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13737
+GeoIndian: fetching messages after ID 13737
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = 213778
+QudsNen: fetching messages after ID 213778
+Inserted 3 rows for QudsNen
+[OK] Telegram Update completed in 77.45s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0   -101.919  32.107000  ...  earthquake 2026-03-13 17:49:14.264
+1   -147.263  60.713000  ...  earthquake 2026-03-13 17:43:47.719
+2   -103.932  31.431000  ...  earthquake 2026-03-13 17:39:50.734
+3   -117.040  33.884333  ...  earthquake 2026-03-13 17:38:17.840
+4   -152.706  59.510000  ...  earthquake 2026-03-13 16:27:16.222
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.88s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11763 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 13.42s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 97 clusters
+last_hour / country: wrote 94 clusters
+last_day / location: wrote 1659 clusters
+last_day / country: wrote 1623 clusters
+[OK] Build Recent Clusters completed in 4.86s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 11 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.56s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46763
+TPOnow: fetching messages after ID 46763
+Inserted 0 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 837083
+me_observer_TG: fetching messages after ID 837083
+Inserted 50 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56311
+rnintel: fetching messages after ID 56311
+Inserted 0 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177532
+DDGeopolitics: fetching messages after ID 177532
+Inserted 0 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43230
+RezistanceTrench1: fetching messages after ID 43230
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74125
+tabzlive: fetching messages after ID 74125
+Inserted 2 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179762
+presstv: fetching messages after ID 179762
+Inserted 1 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79505
+wfwitness: fetching messages after ID 79505
+Inserted 3 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17006
+idfofficial: fetching messages after ID 17006
+Inserted 1 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12640
+FrontlineReportNews: fetching messages after ID 12640
+Inserted 1 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75583
+ClashReport: fetching messages after ID 75583
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71329
+CIG_telegram: fetching messages after ID 71329
+Inserted 1 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 65994
+wc_israel: fetching messages after ID 65994
+Inserted 3 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72474
+beholdisraelchannel: fetching messages after ID 72474
+Inserted 4 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58181
+LebUpdate: fetching messages after ID 58181
+Inserted 0 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19933
+FotrosResistancee: fetching messages after ID 19933
+Inserted 1 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19938
+VigilantFox: fetching messages after ID 19938
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54150
+thecradlemedia: fetching messages after ID 54150
+Inserted 3 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129277
+SGTnewsNetwork: fetching messages after ID 129277
+Inserted 3 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72701
+TheIslanderNews: fetching messages after ID 72701
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29048
+GeoPWatch: fetching messages after ID 29048
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3789
+OSINTWarfare: fetching messages after ID 3789
+Inserted 2 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105112
+aljazeera_world: fetching messages after ID 105112
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168363
+BellumActaNews: fetching messages after ID 168363
+Inserted 1 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37089
+medmannews: fetching messages after ID 37089
+Inserted 0 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25575
+gaza911o: fetching messages after ID 25575
+Inserted 0 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13702
+ThePakistanNews: fetching messages after ID 13702
+Inserted 3 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22251
+hnaftali: fetching messages after ID 22251
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84683
+intelslava: fetching messages after ID 84683
+Inserted 0 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10858
+AssyriaNewsNetwork: fetching messages after ID 10858
+Inserted 1 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69385
+sinembargomx: fetching messages after ID 69385
+Inserted 1 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120936
+wartimedia: fetching messages after ID 120936
+Inserted 0 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42186
+warmonitors: fetching messages after ID 42186
+Inserted 0 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 662
+SimurghRes: fetching messages after ID 662
+Inserted 7 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8664
+tg301military: fetching messages after ID 8664
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6529
+Wor_mil_news: fetching messages after ID 6529
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29566
+AlHaqNews: fetching messages after ID 29566
+Inserted 4 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1617
+newrulesgeo: fetching messages after ID 1617
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70121
+SANANewsEnglish: fetching messages after ID 70121
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13737
+GeoIndian: fetching messages after ID 13737
+Inserted 3 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = 213781
+QudsNen: fetching messages after ID 213781
+Inserted 3 rows for QudsNen
+[OK] Telegram Update completed in 79.85s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -153.085000  60.057000  ...  earthquake 2026-03-13 18:17:01.463
+1  -98.036201  35.630867  ...  earthquake 2026-03-13 18:16:50.328
+2 -101.919000  32.107000  ...  earthquake 2026-03-13 17:49:14.264
+3 -147.263000  60.713000  ...  earthquake 2026-03-13 17:43:47.719
+4 -103.938000  31.432000  ...  earthquake 2026-03-13 17:39:50.983
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.58s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 15.26s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 105 clusters
+last_hour / country: wrote 101 clusters
+last_day / location: wrote 1671 clusters
+last_day / country: wrote 1634 clusters
+[OK] Build Recent Clusters completed in 5.99s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.37s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 2.36s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -153.085000  60.057000  ...  earthquake 2026-03-13 18:17:01.463
+1  -98.036201  35.630867  ...  earthquake 2026-03-13 18:16:50.328
+2 -101.919000  32.107000  ...  earthquake 2026-03-13 17:49:14.264
+3 -147.263000  60.713000  ...  earthquake 2026-03-13 17:43:47.719
+4 -103.938000  31.432000  ...  earthquake 2026-03-13 17:39:50.983
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.08s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 7.45s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 68 clusters
+last_hour / country: wrote 66 clusters
+last_day / location: wrote 1659 clusters
+last_day / country: wrote 1622 clusters
+[OK] Build Recent Clusters completed in 3.01s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 0.90s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 3.82s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -101.916000  32.380000  ...  earthquake 2026-03-13 18:50:12.038
+1 -117.578167  35.753167  ...  earthquake 2026-03-13 18:46:57.850
+2 -146.890000  64.663000  ...  earthquake 2026-03-13 18:46:45.570
+3 -153.085000  60.057000  ...  earthquake 2026-03-13 18:17:01.463
+4  -98.036201  35.630867  ...  earthquake 2026-03-13 18:16:50.328
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 2.11s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 17.34s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 45 clusters
+last_hour / country: wrote 44 clusters
+last_day / location: wrote 1645 clusters
+last_day / country: wrote 1608 clusters
+[OK] Build Recent Clusters completed in 6.68s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.94s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 3.27s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -118.186667  34.987333  ...  earthquake 2026-03-13 18:57:10.410
+1 -101.916000  32.380000  ...  earthquake 2026-03-13 18:50:12.038
+2 -117.578167  35.753167  ...  earthquake 2026-03-13 18:46:57.850
+3 -146.890000  64.663000  ...  earthquake 2026-03-13 18:46:45.570
+4 -153.085000  60.057000  ...  earthquake 2026-03-13 18:17:01.463
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.34s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 12.15s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 25 clusters
+last_hour / country: wrote 24 clusters
+last_day / location: wrote 1632 clusters
+last_day / country: wrote 1595 clusters
+[OK] Build Recent Clusters completed in 6.60s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.88s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 3.71s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -122.282333  37.362167  ...  earthquake 2026-03-13 19:25:39.800
+1 -152.761000  60.219000  ...  earthquake 2026-03-13 19:24:54.879
+2 -121.202003  36.647667  ...  earthquake 2026-03-13 19:17:35.860
+3 -118.186667  34.987333  ...  earthquake 2026-03-13 18:57:10.410
+4 -101.916000  32.380000  ...  earthquake 2026-03-13 18:50:12.038
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 2.13s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 16.35s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 0 clusters
+last_hour / country: wrote 0 clusters
+last_day / location: wrote 1617 clusters
+last_day / country: wrote 1580 clusters
+[OK] Build Recent Clusters completed in 4.41s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.80s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 4.57s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -149.562000  61.843000  ...  earthquake 2026-03-13 19:39:46.240
+1  -98.031036  35.623116  ...  earthquake 2026-03-13 19:39:04.800
+2 -104.138000  31.654000  ...  earthquake 2026-03-13 19:34:36.308
+3 -122.282333  37.362167  ...  earthquake 2026-03-13 19:25:39.800
+4 -152.761000  60.219000  ...  earthquake 2026-03-13 19:24:54.879
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 2.08s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 11.82s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 0 clusters
+last_hour / country: wrote 0 clusters
+last_day / location: wrote 1594 clusters
+last_day / country: wrote 1557 clusters
+[OK] Build Recent Clusters completed in 5.08s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.33s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 1.68s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -153.283000  60.034000  ...  earthquake 2026-03-13 19:42:13.193
+1 -149.562000  61.843000  ...  earthquake 2026-03-13 19:39:46.240
+2  -98.031036  35.623116  ...  earthquake 2026-03-13 19:39:04.800
+3 -104.138000  31.654000  ...  earthquake 2026-03-13 19:34:36.308
+4 -122.282333  37.362167  ...  earthquake 2026-03-13 19:25:39.800
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.14s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 7.07s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 0 clusters
+last_hour / country: wrote 0 clusters
+last_day / location: wrote 1561 clusters
+last_day / country: wrote 1525 clusters
+[OK] Build Recent Clusters completed in 2.62s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 0.88s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+STDERR:
+Traceback (most recent call last):
+  File "/Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py", line 8, in <module>
+    import spacy
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/__init__.py", line 16, in <module>
+    from .cli.info import info  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/__init__.py", line 4, in <module>
+    from . import download as download_module  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/michelleespinoza/opt/anaconda3/envs/fpds/lib/python3.11/site-packages/spacy/cli/download.py", line 6, in <module>
+    import typer
+ModuleNotFoundError: No module named 'typer'
+[FAIL] Telegram Update failed in 1.69s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -153.283000  60.034000  ...  earthquake 2026-03-13 19:42:13.193
+1 -149.562000  61.843000  ...  earthquake 2026-03-13 19:39:46.240
+2  -98.031036  35.623116  ...  earthquake 2026-03-13 19:39:04.800
+3 -104.138000  31.654000  ...  earthquake 2026-03-13 19:34:36.308
+4 -122.282333  37.362167  ...  earthquake 2026-03-13 19:25:39.800
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.01s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11767 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 13.02s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 0 clusters
+last_hour / country: wrote 0 clusters
+last_day / location: wrote 1548 clusters
+last_day / country: wrote 1512 clusters
+[OK] Build Recent Clusters completed in 6.02s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 15 rows to telegram_hourly_anomalies
+Flagged 1 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.66s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+Failed steps:
+ - Telegram Update
+
+==============================
+Starting pipeline: Realtime Pipeline
+==============================
+
+=== Running: Telegram Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/telethon_update.py
+Checking channel: TPOnow
+TPOnow: last saved message_id = 46783
+TPOnow: fetching messages after ID 46783
+Inserted 1 rows for TPOnow
+
+Checking channel: me_observer_TG
+me_observer_TG: last saved message_id = 837448
+me_observer_TG: fetching messages after ID 837448
+Inserted 33 rows for me_observer_TG
+
+Checking channel: rnintel
+rnintel: last saved message_id = 56318
+rnintel: fetching messages after ID 56318
+Inserted 5 rows for rnintel
+
+Checking channel: DDGeopolitics
+DDGeopolitics: last saved message_id = 177538
+DDGeopolitics: fetching messages after ID 177538
+Inserted 1 rows for DDGeopolitics
+
+Checking channel: RezistanceTrench1
+RezistanceTrench1: last saved message_id = 43235
+RezistanceTrench1: fetching messages after ID 43235
+Inserted 0 rows for RezistanceTrench1
+
+Checking channel: tabzlive
+tabzlive: last saved message_id = 74148
+tabzlive: fetching messages after ID 74148
+Inserted 2 rows for tabzlive
+
+Checking channel: presstv
+presstv: last saved message_id = 179786
+presstv: fetching messages after ID 179786
+Inserted 1 rows for presstv
+
+Checking channel: wfwitness
+wfwitness: last saved message_id = 79553
+wfwitness: fetching messages after ID 79553
+Inserted 1 rows for wfwitness
+
+Checking channel: idfofficial
+idfofficial: last saved message_id = 17009
+idfofficial: fetching messages after ID 17009
+Inserted 0 rows for idfofficial
+
+Checking channel: FrontlineReportNews
+FrontlineReportNews: last saved message_id = 12646
+FrontlineReportNews: fetching messages after ID 12646
+Inserted 1 rows for FrontlineReportNews
+
+Checking channel: ClashReport
+ClashReport: last saved message_id = 75584
+ClashReport: fetching messages after ID 75584
+Inserted 0 rows for ClashReport
+
+Checking channel: CIG_telegram
+CIG_telegram: last saved message_id = 71340
+CIG_telegram: fetching messages after ID 71340
+Inserted 0 rows for CIG_telegram
+
+Checking channel: wc_israel
+wc_israel: last saved message_id = 66015
+wc_israel: fetching messages after ID 66015
+Inserted 2 rows for wc_israel
+
+Checking channel: beholdisraelchannel
+beholdisraelchannel: last saved message_id = 72489
+beholdisraelchannel: fetching messages after ID 72489
+Inserted 2 rows for beholdisraelchannel
+
+Checking channel: LebUpdate
+LebUpdate: last saved message_id = 58181
+LebUpdate: fetching messages after ID 58181
+Inserted 0 rows for LebUpdate
+
+Checking channel: FotrosResistancee
+FotrosResistancee: last saved message_id = 19939
+FotrosResistancee: fetching messages after ID 19939
+Inserted 2 rows for FotrosResistancee
+
+Checking channel: VigilantFox
+VigilantFox: last saved message_id = 19940
+VigilantFox: fetching messages after ID 19940
+Inserted 0 rows for VigilantFox
+
+Checking channel: TuckerCarlsonNetwork
+TuckerCarlsonNetwork: last saved message_id = 203
+TuckerCarlsonNetwork: fetching messages after ID 203
+Inserted 0 rows for TuckerCarlsonNetwork
+
+Checking channel: thecradlemedia
+thecradlemedia: last saved message_id = 54163
+thecradlemedia: fetching messages after ID 54163
+Inserted 0 rows for thecradlemedia
+
+Checking channel: SGTnewsNetwork
+SGTnewsNetwork: last saved message_id = 129287
+SGTnewsNetwork: fetching messages after ID 129287
+Inserted 0 rows for SGTnewsNetwork
+
+Checking channel: TheIslanderNews
+TheIslanderNews: last saved message_id = 72719
+TheIslanderNews: fetching messages after ID 72719
+Inserted 0 rows for TheIslanderNews
+
+Checking channel: GeoPWatch
+GeoPWatch: last saved message_id = 29050
+GeoPWatch: fetching messages after ID 29050
+Inserted 0 rows for GeoPWatch
+
+Checking channel: OSINTWarfare
+OSINTWarfare: last saved message_id = 3794
+OSINTWarfare: fetching messages after ID 3794
+Inserted 0 rows for OSINTWarfare
+
+Checking channel: aljazeera_world
+aljazeera_world: last saved message_id = 105119
+aljazeera_world: fetching messages after ID 105119
+Inserted 0 rows for aljazeera_world
+
+Checking channel: BellumActaNews
+BellumActaNews: last saved message_id = 168370
+BellumActaNews: fetching messages after ID 168370
+Inserted 0 rows for BellumActaNews
+
+Checking channel: medmannews
+medmannews: last saved message_id = 37096
+medmannews: fetching messages after ID 37096
+Inserted 0 rows for medmannews
+
+Checking channel: gaza911o
+gaza911o: last saved message_id = 25577
+gaza911o: fetching messages after ID 25577
+Inserted 0 rows for gaza911o
+
+Checking channel: ThePakistanNews
+ThePakistanNews: last saved message_id = 13709
+ThePakistanNews: fetching messages after ID 13709
+Inserted 0 rows for ThePakistanNews
+
+Checking channel: DocumentingIsrael
+DocumentingIsrael: last saved message_id = 42659
+DocumentingIsrael: fetching messages after ID 42659
+Inserted 0 rows for DocumentingIsrael
+
+Checking channel: IntelRepublic
+IntelRepublic: last saved message_id = 51389
+IntelRepublic: fetching messages after ID 51389
+Inserted 0 rows for IntelRepublic
+
+Checking channel: hnaftali
+hnaftali: last saved message_id = 22254
+hnaftali: fetching messages after ID 22254
+Inserted 0 rows for hnaftali
+
+Checking channel: intelslava
+intelslava: last saved message_id = 84685
+intelslava: fetching messages after ID 84685
+Inserted 5 rows for intelslava
+
+Checking channel: NewsFromSudan
+NewsFromSudan: last saved message_id = 2333
+NewsFromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsFromSudan
+
+Checking channel: AssyriaNewsNetwork
+AssyriaNewsNetwork: last saved message_id = 10866
+AssyriaNewsNetwork: fetching messages after ID 10866
+Inserted 0 rows for AssyriaNewsNetwork
+
+Checking channel: kalibrated
+kalibrated: last saved message_id = 29395
+kalibrated: fetching messages after ID 29395
+Inserted 0 rows for kalibrated
+
+Checking channel: sinembargomx
+sinembargomx: last saved message_id = 69388
+sinembargomx: fetching messages after ID 69388
+Inserted 0 rows for sinembargomx
+
+Checking channel: wartimedia
+wartimedia: last saved message_id = 120936
+wartimedia: fetching messages after ID 120936
+Inserted 0 rows for wartimedia
+
+Checking channel: warmonitors
+warmonitors: last saved message_id = 42195
+warmonitors: fetching messages after ID 42195
+Inserted 1 rows for warmonitors
+
+Checking channel: ClaudiaSheinbaum
+ClaudiaSheinbaum: last saved message_id = 2272
+ClaudiaSheinbaum: fetching messages after ID 2272
+Inserted 0 rows for ClaudiaSheinbaum
+
+Checking channel: irna_en
+irna_en: last saved message_id = 33116
+irna_en: fetching messages after ID 33116
+Inserted 0 rows for irna_en
+
+Checking channel: SimurghRes
+SimurghRes: last saved message_id = 690
+SimurghRes: fetching messages after ID 690
+Inserted 3 rows for SimurghRes
+
+Checking channel: AMK_MAPPING
+AMK_MAPPING: last saved message_id = 26330
+AMK_MAPPING: fetching messages after ID 26330
+Inserted 0 rows for AMK_MAPPING
+
+Checking channel: tg301military
+tg301military: last saved message_id = 8670
+tg301military: fetching messages after ID 8670
+Inserted 0 rows for tg301military
+
+Checking channel: News_of_Donbass
+News_of_Donbass: last saved message_id = 21148
+News_of_Donbass: fetching messages after ID 21148
+Inserted 0 rows for News_of_Donbass
+
+Checking channel: Wor_mil_news
+Wor_mil_news: last saved message_id = 6532
+Wor_mil_news: fetching messages after ID 6532
+Inserted 0 rows for Wor_mil_news
+
+Checking channel: AlHaqNews
+AlHaqNews: last saved message_id = 29578
+AlHaqNews: fetching messages after ID 29578
+Inserted 1 rows for AlHaqNews
+
+Checking channel: newrulesgeo
+newrulesgeo: last saved message_id = 1618
+newrulesgeo: fetching messages after ID 1618
+Inserted 0 rows for newrulesgeo
+
+Checking channel: NewsfromSudan
+NewsfromSudan: last saved message_id = 2333
+NewsfromSudan: fetching messages after ID 2333
+Inserted 0 rows for NewsfromSudan
+
+Checking channel: SANANewsEnglish
+SANANewsEnglish: last saved message_id = 70125
+SANANewsEnglish: fetching messages after ID 70125
+Inserted 0 rows for SANANewsEnglish
+
+Checking channel: GeoIndian
+GeoIndian: last saved message_id = 13740
+GeoIndian: fetching messages after ID 13740
+Inserted 0 rows for GeoIndian
+
+Checking channel: internationalreporters_org
+Failed for internationalreporters_org: No user has "internationalreporters_org" as username
+
+Checking channel: QudsNen
+QudsNen: last saved message_id = 213799
+QudsNen: fetching messages after ID 213799
+Inserted 1 rows for QudsNen
+[OK] Telegram Update completed in 75.45s
+
+=== Running: USGS Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/usgs_update.py
+longitude   latitude  ...        type                    time
+0 -155.458328  19.162333  ...  earthquake 2026-03-13 20:20:18.710
+1  143.287900  39.443900  ...  earthquake 2026-03-13 19:55:21.333
+2 -111.093167  38.347167  ...  earthquake 2026-03-13 19:44:01.990
+3 -153.283000  60.034000  ...  earthquake 2026-03-13 19:42:13.193
+4 -149.562000  61.843000  ...  earthquake 2026-03-13 19:39:46.240
+
+[5 rows x 7 columns]
+[OK] USGS Update completed in 1.82s
+
+=== Running: Build Hourly Aggregates ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_event_hourly_aggregates.py
+Wrote 11829 hourly aggregate rows to telegram_event_hourly
+[OK] Build Hourly Aggregates completed in 16.15s
+
+=== Running: Build Recent Clusters ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_recent_clusters.py
+last_hour / location: wrote 96 clusters
+last_hour / country: wrote 94 clusters
+last_day / location: wrote 1696 clusters
+last_day / country: wrote 1655 clusters
+[OK] Build Recent Clusters completed in 6.11s
+
+=== Running: Build Hourly Anomalies ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/processing/build_hourly_anomalies.py
+Wrote 26 rows to telegram_hourly_anomalies
+Flagged 0 anomalies for latest hour
+[OK] Build Hourly Anomalies completed in 1.73s
+
+==============================
+Finished pipeline: Realtime Pipeline
+==============================
+All steps completed successfully.
