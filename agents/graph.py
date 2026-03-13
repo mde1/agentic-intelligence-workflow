@@ -8,6 +8,7 @@ from langchain_openai import ChatOpenAI
 import logging
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -199,6 +200,7 @@ class Finding(BaseModel):
     confidence: str = Field(..., description="One of: high, medium, low")
     kind: str = Field(..., description="Type such as hourly_anomaly, recent_cluster, stock_alert, earthquake")
     evidence: list[str] = Field(default_factory=list, description="Concrete evidence points")
+    source_type: list[str] = Field(default_factory=list, description="Which data sources were these observations gleaned from")
     reason: str = Field(..., description="Why this matters")
 
 
@@ -240,14 +242,16 @@ def fuse_findings(state: GraphState) -> GraphState:
         - avoid speculation
         - clearly state uncertainty
         - produce concise analyst-style findings
+        - group findings by region
 
         Rules:
         - Prefer developments supported by multiple indicators
         - If evidence is weak, say so
         - Do not invent facts not present in the input
         - Focus on operational significance, not generic summaries
-        - Return no more than 8 findings
+        - Return no more than 15 findings
         - Confidence must be one of: high, medium, low
+        - Compare the current developments with a summary of the last several hours
         """
 
     human_prompt = f"""
@@ -297,6 +301,7 @@ def format_response(state: GraphState) -> GraphState:
             title = item.get("title", "Unnamed finding")
             confidence = item.get("confidence", "unknown").upper()
             evidence = item.get("evidence", []) or []
+            source_type = item.get("source_type", []) or []
             reason = item.get("reason", "")
 
             evidence_text = ", ".join(str(x) for x in evidence if x)
@@ -306,6 +311,8 @@ def format_response(state: GraphState) -> GraphState:
                 bullet += f" — {evidence_text}"
             if reason:
                 bullet += f". {reason}"
+            if source_type:
+                bullet += f" - {source_type}"
 
             bullets.append(bullet)
 
@@ -346,12 +353,28 @@ def build_graph():
 
 graph = build_graph()
 
+# ---------------------------
+# 6. Visualize Graph
+# ---------------------------
+
+def save_graph_visualization():
+    PROJECT_ROOT = Path(__file__).parent.parent
+    """Save the workflow graph as a PNG image."""
+    try:
+        png_data = graph.get_graph().draw_mermaid_png()
+        output_path = PROJECT_ROOT / "agents" / "workflow_graph.png"
+        with open(output_path, "wb") as f:
+            f.write(png_data)
+        print(f"Workflow graph saved to outputs/workflow_graph.png\n")
+    except Exception as e:
+        print(f"Could not generate graph visualization: {e}\n")
+
 
 if __name__ == "__main__":
     result = graph.invoke(
-        {"user_request": "What happened today?"}
+        {"user_request": "What is the last timestamp in today's messages?"}
     )
-
+    save_graph_visualization()
     #print("\n=== RESULT TYPE ===")
     #print(type(result))
 

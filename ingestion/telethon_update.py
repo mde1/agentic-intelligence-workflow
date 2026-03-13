@@ -65,7 +65,7 @@ CHANNELS = [
     "News_of_Donbass",
     "Wor_mil_news",
     "AlHaqNews",
-    "newrulesgeo"
+    "newrulesgeo", "NewsfromSudan","SANANewsEnglish","GeoIndian", "internationalreporters_org"
 ]
 
 # =========================

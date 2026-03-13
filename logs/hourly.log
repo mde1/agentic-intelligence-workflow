@@ -1,0 +1,470 @@
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 1
+Updated: 35
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 2
+Updated: 73
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 2
+Updated: 59
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 4
+Updated: 21
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.32s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.81s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 0
+Updated: 36
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 1
+Updated: 74
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 0
+Updated: 61
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 4
+Updated: 21
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.30s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 2.03s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 1
+Updated: 35
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 1
+Updated: 74
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 2
+Updated: 59
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 1
+Updated: 24
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.39s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.86s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 0
+Updated: 36
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 1
+Updated: 74
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 1
+Updated: 60
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 5
+Updated: 20
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.29s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 6.28s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 0
+Updated: 36
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 0
+Updated: 75
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 3
+Updated: 58
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 1
+Updated: 24
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.43s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.98s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 1
+Updated: 35
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 1
+Updated: 74
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 1
+Updated: 60
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 5
+Updated: 20
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.26s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.92s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 1
+Updated: 35
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 1
+Updated: 74
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 5
+Updated: 56
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 3
+Updated: 22
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.30s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.93s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 1
+Updated: 35
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 0
+Updated: 75
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 0
+Updated: 61
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 4
+Updated: 21
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.30s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.73s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 3
+Updated: 33
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 1
+Updated: 74
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 1
+Updated: 60
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 6
+Updated: 19
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 0.97s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.45s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Hourly Pipeline
+==============================
+
+=== Running: News Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/wsj_update.py
+Feed: WSJ.com: Economy
+URL: https://feeds.content.dowjones.io/public/rss/socialeconomyfeed
+Entries returned: 36
+Inserted: 1
+Updated: 35
+
+Feed: WSJ.com: World News
+URL: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Entries returned: 75
+Inserted: 0
+Updated: 75
+
+Feed: WSJ.com: Markets
+URL: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+Entries returned: 61
+Inserted: 1
+Updated: 60
+
+Feed: Al Jazeera – Breaking News, World News and Video from Al Jazeera
+URL: https://www.aljazeera.com/xml/rss/all.xml
+Entries returned: 25
+Inserted: 5
+Updated: 20
+
+Done. SQLite DB: db/news_feeds.db
+[OK] News Update completed in 1.50s
+
+=== Running: Warzone Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/warzone_update.py
+Feed title: The War Zone
+Entries fetched: 37
+Inserted new rows: 0
+Updated existing rows: 37
+SQLite DB: db/twz_feed.db
+[OK] Warzone Update completed in 1.50s
+
+==============================
+Finished pipeline: Hourly Pipeline
+==============================
+All steps completed successfully.

@@ -107,7 +107,7 @@ def build_hourly_aggregates(events: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame(columns=output_columns)
 
     events = events.copy()
-    events["message_date"] = pd.to_datetime(events["message_date"], utc=True, errors="coerce")
+    events["message_date"] = pd.to_datetime(events["message_date"], format="ISO8601", utc=True, errors="coerce")
     events = events.dropna(subset=["message_date", "event_type", "message_text"])
 
     geo_df = events["message_text"].apply(extract_geography).apply(pd.Series)
@@ -147,7 +147,7 @@ def ensure_output_table(conn: sqlite3.Connection) -> None:
 
 def save_hourly_aggregates(conn: sqlite3.Connection, df: pd.DataFrame) -> None:
     if not df.empty:
-        df.to_sql(OUTPUT_TABLE, conn, if_exists="append", index=False)
+        df.to_sql(OUTPUT_TABLE, conn, if_exists="replace", index=False)
 
     cursor = conn.cursor()
     cursor.execute(f"""
