@@ -6,7 +6,7 @@ import requests
 load_dotenv()
 MAP_KEY = os.getenv("FIRMS_API_KEY")
 
-# now let's check how many transactions we have
+# This will have to wait - the data is being censored (delayed) by the war
 
 # We can also focus on smaller area ex. South Asia and get last 3 days of records
 countries_url = 'https://firms.modaps.eosdis.nasa.gov/api/countries'

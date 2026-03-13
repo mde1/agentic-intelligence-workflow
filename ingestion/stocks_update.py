@@ -13,7 +13,7 @@ API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 stocks = [
     "IBM",
     "META",
-    "GOOG",
+    "GOOGL",
     "LMT", # Lockheed Martin
     "BA", # Boeing
     "NOC", # Northrup Gruman
@@ -40,6 +40,21 @@ stocks = [
     "PG", # Proctor and Gamble
     "CVX", # Chevron
     "WMT", # Walmart
+    "TSLA", # Tesla
+    "XOM", # Exxon
+    "JNJ", # Johnson and Johnson
+    "LIN", # Linde plc
+    "COST", # Costco
+    "MELI", # Mercado Libre LATAM Commerce
+    "CRWD", # Cybersecurity
+    "NU", # Nu Holdings
+    "GLD", # Gold Shares
+    "KO", # Coca-cola
+    "WM", # Waste-management
+    "ORCL", # Oracle
+    "MA", # Mastercard
+    "NFLX", # Netflix
+    "V", # Visa
 
 ]
 
