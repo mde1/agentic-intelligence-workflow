@@ -1,0 +1,200 @@
+telegram_messages:
+  description: Raw Telegram OSINT event messages
+  dimensions:
+    message_date:
+      type: time
+    channel_username:
+      type: categorical
+    country:
+      type: categorical
+    event_type:
+      type: categorical
+
+  metrics:
+    message_count:
+      type: count
+
+telegram_event_clusters:
+  description: Burst clusters of related event reports
+
+  dimensions:
+    cluster_start:
+      type: time
+    country:
+      type: categorical
+    event_type:
+      type: categorical
+
+  metrics:
+    message_count:
+      type: sum
+    channel_count:
+      type: count_distinct
+    severity_score:
+      type: number
+
+telegram_event_hourly:
+  description: Hourly event aggregates used for anomaly detection
+
+  dimensions:
+    hour_bucket:
+      type: time
+    country:
+      type: categorical
+    event_type:
+      type: categorical
+
+  metrics:
+    message_count:
+      type: sum
+    unique_channels:
+      type: count_distinct
+
+
+news_feed_posts:
+    description:
+      RSS or news-feed posts stored in news_feeds.db. These posts provide
+      contextual geopolitical and breaking-news coverage that can corroborate
+      Telegram events, anomaly spikes, and regional developments.
+
+    database: news_feeds.db
+    table: posts
+
+    dimensions:
+      id:
+        type: primary_key
+        description: Auto-incrementing unique identifier for each stored post
+
+      feed_url:
+        type: categorical
+        description: URL of the RSS or feed source
+
+      feed_title:
+        type: categorical
+        description: Human-readable title of the feed source
+
+      guid:
+        type: text
+        description: Feed-provided GUID if available
+
+      title:
+        type: text
+        description: Headline or title of the post
+
+      link:
+        type: text
+        description: Canonical URL to the post
+
+      published:
+        type: time
+        description: Original publication timestamp from the feed entry
+
+      summary:
+        type: text
+        description: Feed summary, excerpt, or description text
+
+      author:
+        type: categorical
+        description: Author name if provided by the feed
+
+      category:
+        type: categorical
+        description: Feed category or topic label if available
+
+      fetched_at:
+        type: time
+        description: Timestamp when the post was fetched and stored locally
+
+      raw_entry:
+        type: text
+        description: Raw serialized feed entry for debugging or reprocessing
+
+    metrics:
+      post_count:
+        type: count
+        description: Number of posts
+
+      source_count:
+        type: count_distinct
+        sql: feed_url
+        description: Number of distinct feed sources
+
+      author_count:
+        type: count_distinct
+        sql: author
+        description: Number of distinct authors
+
+
+twz_feed_posts:
+    description: 
+      Posts stored in twz_feed.db from The War Zone or related defense-analysis
+      feeds. These posts are especially useful for contextualizing military,
+      defense, aviation, and geopolitical developments referenced by Telegram
+      or anomaly signals.
+
+    database: twz_feed.db
+    table: posts
+
+    dimensions:
+      id:
+        type: primary_key
+        description: Auto-incrementing unique identifier for each stored post
+
+      feed_url:
+        type: categorical
+        description: URL of the RSS or feed source
+
+      feed_title:
+        type: categorical
+        description: Human-readable title of the feed source
+
+      guid:
+        type: text
+        description: Feed-provided GUID if available
+
+      title:
+        type: text
+        description: Headline or title of the post
+
+      link:
+        type: text
+        description: Canonical URL to the post
+
+      published:
+        type: time
+        description: Original publication timestamp from the feed entry
+
+      summary:
+        type: text
+        description: Feed summary, excerpt, or description text
+
+      author:
+        type: categorical
+        description: Author name if provided by the feed
+
+      category:
+        type: categorical
+        description: Feed category or topic label if available
+
+      fetched_at:
+        type: time
+        description: Timestamp when the post was fetched and stored locally
+
+      raw_entry:
+        type: text
+        description: Raw serialized feed entry for debugging or reprocessing
+
+    metrics:
+      post_count:
+        type: count
+        description: Number of posts
+
+      source_count:
+        type: count_distinct
+        sql: feed_url
+        description: Number of distinct feed sources
+
+      author_count:
+        type: count_distinct
+        sql: author
+        description: Number of distinct authors

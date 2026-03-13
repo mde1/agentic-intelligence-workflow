@@ -9,6 +9,7 @@ import logging
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import yaml
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -42,6 +43,7 @@ def parse_request(state: GraphState) -> GraphState:
     Keep this simple before adding an LLM.
     """
     user_request = state.get("user_request", "").strip()
+    print("PARSE REQUEST SAW:", user_request)
     text = user_request.lower()
 
     request_type = "latest_summary"
@@ -63,6 +65,8 @@ def parse_request(state: GraphState) -> GraphState:
         request_type = "anomaly_lookup"
     elif "what happened" in text or "summary" in text:
         request_type = "latest_summary"
+    elif "last timestamp" in text or "latest timestamp" in text or "most recent message" in text:
+        request_type = "metadata_lookup"
 
     # Geography
     country_terms = [
@@ -105,6 +109,8 @@ def plan_queries(state: GraphState) -> GraphState:
     """
     Decide which cached endpoints/tables to use.
     """
+    with open("semantic/semantic_models.yml") as f:
+        semantic_models = yaml.safe_load(f)
     request_type = state.get("request_type", "latest_summary")
     time_window = state.get("time_window", "last_hour")
     countries = state.get("countries", [])
