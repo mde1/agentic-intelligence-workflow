@@ -27,13 +27,17 @@ Use these data sources to build a plan.
 8. Countries should be normalized to country names when possible.
 9. Event types should only be included if the user explicitly mentions them or strongly implies them.
 10. Do not invent regions, countries, or event types not supported by the request.
+11. For analysis_mode use:
+    - "intel_summary" for narrative summaries, "what happened", anomalies, or general intel (default).
+    - "data_analysis" or "visualization" when the user explicitly asks for tables, charts, grouping by columns, aggregations, or "run analysis" on the data.
 
 # Output schema
 Return JSON only:
-{
+{{
   "request_type": "...",
   "time_window": "...",
   "countries": ["..."],
   "event_types": ["..."],
-  "sources_needed": ["..."]
-}
+  "sources_needed": ["..."],
+  "analysis_mode": "intel_summary" | "data_analysis" | "visualization"
+}}

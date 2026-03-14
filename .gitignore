@@ -37,3 +37,6 @@ pandasai.log
 
 #Telethon
 *.session
+
+# Slack Manifest
+slack_manifest.json

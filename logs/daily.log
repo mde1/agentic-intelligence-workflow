@@ -1,0 +1,847 @@
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Date Ticker          Alert
+37 2026-03-13   AAPL  3-Day Decline
+         Date Ticker          Alert
+37 2026-03-13   AAPL  3-Day Decline
+69 2026-03-13   AMZN  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+          Date Ticker          Alert
+37  2026-03-13   AAPL  3-Day Decline
+69  2026-03-13   AMZN  3-Day Decline
+114 2026-03-11   AVAV  3-Day Decline
+145 2026-03-11     BA  3-Day Decline
+146 2026-03-12     BA  3-Day Decline
+168 2026-03-13    CAT  3-Day Decline
+240 2026-03-11    CRM  3-Day Decline
+346 2026-03-11     GD  3-Day Decline
+359 2026-03-13    GLD  3-Day Decline
+415 2026-03-13     GS  3-Day Decline
+468 2026-03-11    IBM  3-Day Decline
+469 2026-03-12    IBM  3-Day Decline
+470 2026-03-13    IBM  3-Day Decline
+528 2026-03-13    JNJ  3-Day Decline
+550 2026-03-12    JPM  3-Day Decline
+580 2026-03-13     KO  3-Day Decline
+678 2026-03-11    LMT  3-Day Decline
+709 2026-03-11     MA  3-Day Decline
+710 2026-03-12     MA  3-Day Decline
+814 2026-03-12    MRK  3-Day Decline
+815 2026-03-13    MRK  3-Day Decline
+849 2026-03-12   MSFT  3-Day Decline
+850 2026-03-13   MSFT  3-Day Decline
+886 2026-03-11   NFLX  3-Day Decline
+887 2026-03-12   NFLX  3-Day Decline
+910 2026-03-11    NOC  3-Day Decline
+925 2026-03-13     NU  3-Day Decline
+           Date Ticker          Alert
+37   2026-03-13   AAPL  3-Day Decline
+69   2026-03-13   AMZN  3-Day Decline
+114  2026-03-11   AVAV  3-Day Decline
+145  2026-03-11     BA  3-Day Decline
+146  2026-03-12     BA  3-Day Decline
+168  2026-03-13    CAT  3-Day Decline
+240  2026-03-11    CRM  3-Day Decline
+346  2026-03-11     GD  3-Day Decline
+359  2026-03-13    GLD  3-Day Decline
+415  2026-03-13     GS  3-Day Decline
+468  2026-03-11    IBM  3-Day Decline
+469  2026-03-12    IBM  3-Day Decline
+470  2026-03-13    IBM  3-Day Decline
+528  2026-03-13    JNJ  3-Day Decline
+550  2026-03-12    JPM  3-Day Decline
+580  2026-03-13     KO  3-Day Decline
+678  2026-03-11    LMT  3-Day Decline
+709  2026-03-11     MA  3-Day Decline
+710  2026-03-12     MA  3-Day Decline
+814  2026-03-12    MRK  3-Day Decline
+815  2026-03-13    MRK  3-Day Decline
+849  2026-03-12   MSFT  3-Day Decline
+850  2026-03-13   MSFT  3-Day Decline
+886  2026-03-11   NFLX  3-Day Decline
+887  2026-03-12   NFLX  3-Day Decline
+910  2026-03-11    NOC  3-Day Decline
+925  2026-03-13     NU  3-Day Decline
+1173 2026-03-11      V  3-Day Decline
+1174 2026-03-12      V  3-Day Decline
+           Date Ticker          Alert
+37   2026-03-13   AAPL  3-Day Decline
+69   2026-03-13   AMZN  3-Day Decline
+114  2026-03-11   AVAV  3-Day Decline
+145  2026-03-11     BA  3-Day Decline
+146  2026-03-12     BA  3-Day Decline
+168  2026-03-13    CAT  3-Day Decline
+240  2026-03-11    CRM  3-Day Decline
+346  2026-03-11     GD  3-Day Decline
+359  2026-03-13    GLD  3-Day Decline
+415  2026-03-13     GS  3-Day Decline
+468  2026-03-11    IBM  3-Day Decline
+469  2026-03-12    IBM  3-Day Decline
+470  2026-03-13    IBM  3-Day Decline
+528  2026-03-13    JNJ  3-Day Decline
+550  2026-03-12    JPM  3-Day Decline
+580  2026-03-13     KO  3-Day Decline
+678  2026-03-11    LMT  3-Day Decline
+709  2026-03-11     MA  3-Day Decline
+710  2026-03-12     MA  3-Day Decline
+814  2026-03-12    MRK  3-Day Decline
+815  2026-03-13    MRK  3-Day Decline
+849  2026-03-12   MSFT  3-Day Decline
+850  2026-03-13   MSFT  3-Day Decline
+886  2026-03-11   NFLX  3-Day Decline
+887  2026-03-12   NFLX  3-Day Decline
+910  2026-03-11    NOC  3-Day Decline
+925  2026-03-13     NU  3-Day Decline
+1173 2026-03-11      V  3-Day Decline
+1174 2026-03-12      V  3-Day Decline
+           Date Ticker          Alert
+37   2026-03-13   AAPL  3-Day Decline
+69   2026-03-13   AMZN  3-Day Decline
+114  2026-03-11   AVAV  3-Day Decline
+145  2026-03-11     BA  3-Day Decline
+146  2026-03-12     BA  3-Day Decline
+168  2026-03-13    CAT  3-Day Decline
+240  2026-03-11    CRM  3-Day Decline
+346  2026-03-11     GD  3-Day Decline
+359  2026-03-13    GLD  3-Day Decline
+415  2026-03-13     GS  3-Day Decline
+468  2026-03-11    IBM  3-Day Decline
+469  2026-03-12    IBM  3-Day Decline
+470  2026-03-13    IBM  3-Day Decline
+528  2026-03-13    JNJ  3-Day Decline
+550  2026-03-12    JPM  3-Day Decline
+580  2026-03-13     KO  3-Day Decline
+678  2026-03-11    LMT  3-Day Decline
+709  2026-03-11     MA  3-Day Decline
+710  2026-03-12     MA  3-Day Decline
+814  2026-03-12    MRK  3-Day Decline
+815  2026-03-13    MRK  3-Day Decline
+849  2026-03-12   MSFT  3-Day Decline
+850  2026-03-13   MSFT  3-Day Decline
+886  2026-03-11   NFLX  3-Day Decline
+887  2026-03-12   NFLX  3-Day Decline
+910  2026-03-11    NOC  3-Day Decline
+925  2026-03-13     NU  3-Day Decline
+1173 2026-03-11      V  3-Day Decline
+1174 2026-03-12      V  3-Day Decline
+           Date Ticker          Alert
+37   2026-03-13   AAPL  3-Day Decline
+69   2026-03-13   AMZN  3-Day Decline
+114  2026-03-11   AVAV  3-Day Decline
+145  2026-03-11     BA  3-Day Decline
+146  2026-03-12     BA  3-Day Decline
+168  2026-03-13    CAT  3-Day Decline
+240  2026-03-11    CRM  3-Day Decline
+346  2026-03-11     GD  3-Day Decline
+359  2026-03-13    GLD  3-Day Decline
+415  2026-03-13     GS  3-Day Decline
+468  2026-03-11    IBM  3-Day Decline
+469  2026-03-12    IBM  3-Day Decline
+470  2026-03-13    IBM  3-Day Decline
+528  2026-03-13    JNJ  3-Day Decline
+550  2026-03-12    JPM  3-Day Decline
+580  2026-03-13     KO  3-Day Decline
+678  2026-03-11    LMT  3-Day Decline
+709  2026-03-11     MA  3-Day Decline
+710  2026-03-12     MA  3-Day Decline
+814  2026-03-12    MRK  3-Day Decline
+815  2026-03-13    MRK  3-Day Decline
+849  2026-03-12   MSFT  3-Day Decline
+850  2026-03-13   MSFT  3-Day Decline
+886  2026-03-11   NFLX  3-Day Decline
+887  2026-03-12   NFLX  3-Day Decline
+910  2026-03-11    NOC  3-Day Decline
+925  2026-03-13     NU  3-Day Decline
+1173 2026-03-11      V  3-Day Decline
+1174 2026-03-12      V  3-Day Decline
+           Date Ticker          Alert
+37   2026-03-13   AAPL  3-Day Decline
+69   2026-03-13   AMZN  3-Day Decline
+114  2026-03-11   AVAV  3-Day Decline
+145  2026-03-11     BA  3-Day Decline
+146  2026-03-12     BA  3-Day Decline
+168  2026-03-13    CAT  3-Day Decline
+240  2026-03-11    CRM  3-Day Decline
+346  2026-03-11     GD  3-Day Decline
+359  2026-03-13    GLD  3-Day Decline
+415  2026-03-13     GS  3-Day Decline
+468  2026-03-11    IBM  3-Day Decline
+469  2026-03-12    IBM  3-Day Decline
+470  2026-03-13    IBM  3-Day Decline
+528  2026-03-13    JNJ  3-Day Decline
+550  2026-03-12    JPM  3-Day Decline
+580  2026-03-13     KO  3-Day Decline
+678  2026-03-11    LMT  3-Day Decline
+709  2026-03-11     MA  3-Day Decline
+710  2026-03-12     MA  3-Day Decline
+814  2026-03-12    MRK  3-Day Decline
+815  2026-03-13    MRK  3-Day Decline
+849  2026-03-12   MSFT  3-Day Decline
+850  2026-03-13   MSFT  3-Day Decline
+886  2026-03-11   NFLX  3-Day Decline
+887  2026-03-12   NFLX  3-Day Decline
+910  2026-03-11    NOC  3-Day Decline
+925  2026-03-13     NU  3-Day Decline
+1173 2026-03-11      V  3-Day Decline
+1174 2026-03-12      V  3-Day Decline
+STDERR:
+[                       0%                       ]
+[**                     5%                       ]  2 of 43 completed
+[***                    7%                       ]  3 of 43 completed
+[****                   9%                       ]  4 of 43 completed
+[******                12%                       ]  5 of 43 completed
+[*******               14%                       ]  6 of 43 completed
+[********              16%                       ]  7 of 43 completed
+[*********             19%                       ]  8 of 43 completed
+[**********            21%                       ]  9 of 43 completed
+[***********           23%                       ]  10 of 43 completed
+[***********           23%                       ]  10 of 43 completed
+[*************         28%                       ]  12 of 43 completed
+[**************        30%                       ]  13 of 43 completed
+[****************      33%                       ]  14 of 43 completed
+[*****************     35%                       ]  15 of 43 completed
+[******************    37%                       ]  16 of 43 completed
+[*******************   40%                       ]  17 of 43 completed
+[********************  42%                       ]  18 of 43 completed
+[********************* 44%                       ]  19 of 43 completed
+[**********************47%                       ]  20 of 43 completed
+[**********************49%                       ]  21 of 43 completed
+[**********************51%                       ]  22 of 43 completed
+[**********************53%                       ]  23 of 43 completed
+[**********************56%**                     ]  24 of 43 completed
+[**********************58%***                    ]  25 of 43 completed
+[**********************60%****                   ]  26 of 43 completed
+[**********************63%*****                  ]  27 of 43 completed
+[**********************65%******                 ]  28 of 43 completed
+[**********************67%*******                ]  29 of 43 completed
+[**********************70%*********              ]  30 of 43 completed
+[**********************72%**********             ]  31 of 43 completed
+[**********************74%***********            ]  32 of 43 completed
+[**********************77%************           ]  33 of 43 completed
+[**********************77%************           ]  33 of 43 completed
+[**********************81%**************         ]  35 of 43 completed
+[**********************84%***************        ]  36 of 43 completed
+[**********************86%****************       ]  37 of 43 completed
+[**********************88%*****************      ]  38 of 43 completed
+[**********************91%*******************    ]  39 of 43 completed
+[**********************93%********************   ]  40 of 43 completed
+[**********************95%*********************  ]  41 of 43 completed
+[**********************98%********************** ]  42 of 43 completed
+[*********************100%***********************]  43 of 43 completed
+[OK] Stocks Update completed in 6.24s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.

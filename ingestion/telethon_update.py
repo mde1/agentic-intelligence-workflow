@@ -70,7 +70,18 @@ CHANNELS = [
     "SANANewsEnglish",
     "GeoIndian", 
     "internationalreporters_org",
-    "QudsNen"
+    "QudsNen",
+    "DeepStateUA",
+    "DefenderDome",
+    "KurdishFrontNews",
+    "war_noir",
+    "englishabuali",
+    "TheTimesOfIsrael2022",
+    "The_Jerusalem_Post",
+    "ILTVnews",
+    "nytimes",
+    "MiddleEastEye_TG",
+    "trtworld",
 ]
 
 # =========================

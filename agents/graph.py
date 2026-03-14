@@ -10,6 +10,9 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import yaml
+import pandasai
+from os import PathLike
+
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -23,8 +26,19 @@ logger = logging.getLogger(__name__)
 
 INTEL_BASE_URL = "http://127.0.0.1:8000"
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PLANNER_PROMPT_PATH = PROJECT_ROOT / "agents" / "prompts" / "planner_prompt.txt"
+SEMANTIC_MODELS_PATH = PROJECT_ROOT / "semantic" / "semantic_models.yml"
+FORECAST_PROMPT_PATH = PROJECT_ROOT / "agents" / "prompts" / "forecast_implications.txt"
+FUSION_PROMPT_PATH = PROJECT_ROOT / "agents" / "prompts" / "fusion_prompt.txt"
+
+def load_prompt(path: str | Path | PathLike) -> str:
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
+
 class GraphState(TypedDict):
     user_request: str
+    analysis_mode: str
     request_type: str
     time_window: str                 # "last_hour" | "last_day" | "last_week"
     countries: list[str]
@@ -33,6 +47,7 @@ class GraphState(TypedDict):
     retrieval_plan: dict[str, Any]
     retrieved_data: dict[str, Any]
     fused_analysis: dict[str, Any]
+    forecast_analysis: dict[str,Any]
     final_report: str
 
 # -------------------------------------------------------------------
@@ -74,13 +89,7 @@ def parse_request(state: GraphState) -> GraphState:
     }
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PROMPT_PATH = PROJECT_ROOT / "agents" / "prompts" / "planner_prompt.txt"
-SEMANTIC_MODELS_PATH = PROJECT_ROOT / "semantic" / "semantic_models.yml"
 
-def load_prompt(path: str) -> str:
-    with open(path, "r") as f:
-        return f.read()
 # -------------------------------------------------------------------
 # QUERY PLANNER
 # -------------------------------------------------------------------
@@ -91,12 +100,13 @@ class PlannerOutput(BaseModel):
     countries: list[str] = Field(default_factory=list)
     event_types: list[str] = Field(default_factory=list)
     sources_needed: list[str] = Field(default_factory=list)
+    analysis_mode: str
 
 def plan_queries(state: GraphState) -> GraphState:
     semantic_models = yaml.safe_load(SEMANTIC_MODELS_PATH.read_text(encoding="utf-8"))
     semantic_context = yaml.dump(semantic_models, sort_keys=False)
 
-    raw_template = load_prompt(PROMPT_PATH)
+    raw_template = load_prompt(PLANNER_PROMPT_PATH)
     planner_prompt = raw_template.format(semantic_context=semantic_context)
 
     user_request = state.get("user_request", "")
@@ -109,16 +119,16 @@ def plan_queries(state: GraphState) -> GraphState:
     structured_llm = llm.with_structured_output(PlannerOutput, method="json_schema")
 
     planner_input = f"""
-User request: {user_request}
+                User request: {user_request}
 
-Current parser hints:
-- request_type: {parsed_request_type}
-- time_window: {parsed_time_window}
-- countries: {parsed_countries}
-- event_types: {parsed_event_types}
+                Current parser hints:
+                - request_type: {parsed_request_type}
+                - time_window: {parsed_time_window}
+                - countries: {parsed_countries}
+                - event_types: {parsed_event_types}
 
-Return the best retrieval plan JSON.
-""".strip()
+                Return the best retrieval plan JSON.
+                """.strip()
 
     plan = structured_llm.invoke([
         {"role": "system", "content": planner_prompt},
@@ -145,6 +155,11 @@ Return the best retrieval plan JSON.
         "use_earthquakes": "earthquakes" in sources_needed,
         "requires_custom_analysis": request_type == "historical_comparison",
     }
+    logger.info("Planner prompt loaded from %s", PLANNER_PROMPT_PATH)
+    logger.info("Planner input user_request=%s", user_request)
+    logger.info("Planner output=%s", plan)
+
+    analysis_mode = plan.get("analysis_mode", "intel_summary")
 
     return {
         "request_type": request_type,
@@ -153,8 +168,21 @@ Return the best retrieval plan JSON.
         "event_types": event_types,
         "sources_needed": sources_needed,
         "retrieval_plan": retrieval_plan,
+        "analysis_mode": analysis_mode,
     }
+    
 
+def route_analysis_node(state: GraphState) -> GraphState:
+    """Node: no state update; routing is done by route_analysis_edges."""
+    return {}
+
+
+def route_analysis_edges(state: GraphState) -> str:
+    """Conditional edges: return the key for the next node."""
+    mode = state.get("analysis_mode", "intel_summary")
+    if mode in ["data_analysis", "visualization"]:
+        return "pandas_ai"
+    return "intel_path"
 
 # -------------------------------------------------------------------
 # RETRIEVAL
@@ -212,6 +240,104 @@ def retrieve_intel(state: GraphState) -> GraphState:
     return {"retrieved_data": retrieved_data}
 
 
+def build_dataframe(retrieved: dict[str, Any]):
+    """Build a pandas DataFrame from intel snapshot and hourly anomalies for PandasAI."""
+    import pandas as pd
+
+    rows = []
+    snapshot = retrieved.get("intel_snapshot", {}) or {}
+    for cluster in snapshot.get("recent_clusters", [])[:100]:
+        rows.append({
+            "source": "cluster",
+            "country": cluster.get("country", ""),
+            "event_type": cluster.get("event_type", ""),
+            "severity": cluster.get("severity"),
+            "message_count": cluster.get("message_count"),
+            "location": cluster.get("location", ""),
+        })
+    for item in (retrieved.get("hourly_anomalies") or [])[:100]:
+        rows.append({
+            "source": "anomaly",
+            "country": item.get("country", ""),
+            "event_type": item.get("event_type", ""),
+            "ratio": item.get("ratio"),
+            "message_count": item.get("message_count"),
+            "location": item.get("location", ""),
+        })
+    if not rows:
+        return pd.DataFrame(columns=["source", "country", "event_type", "severity", "ratio", "message_count", "location"])
+    return pd.DataFrame(rows)
+
+
+def run_pandas_ai(state: GraphState) -> GraphState:
+    query = state["user_request"]
+    retrieved = state.get("retrieved_data", {})
+
+    # If we routed to pandas without retrieving (pandas path skips retrieve_intel), fetch now.
+    if not retrieved or not (retrieved.get("intel_snapshot") or retrieved.get("hourly_anomalies")):
+        plan = state.get("retrieval_plan", {}) or {}
+        cluster_window = plan.get("cluster_window", "last_hour")
+        cluster_level = plan.get("cluster_level", "location")
+        try:
+            intel_snapshot = _get_json(
+                f"{INTEL_BASE_URL}/intel/latest",
+                params={
+                    "cluster_window": cluster_window,
+                    "cluster_level": cluster_level,
+                    "anomaly_limit": 50,
+                    "cluster_limit": 50,
+                    "stock_limit": 25,
+                    "earthquake_limit": 25,
+                },
+            )
+            hourly_anomalies = _get_json(
+                f"{INTEL_BASE_URL}/anomalies/hourly",
+                params={"anomalies_only": "true", "limit": 100},
+            )
+            retrieved = {"intel_snapshot": intel_snapshot, "hourly_anomalies": hourly_anomalies}
+        except Exception as e:
+            logger.warning("PandasAI path: could not fetch intel: %s", e)
+
+    df = build_dataframe(retrieved)
+
+    try:
+        import os
+        # Force non-GUI backend so PandasAI-generated matplotlib code doesn't open windows
+        # (avoids "NSWindow should only be instantiated on the main thread" when running in Slack bot)
+        import matplotlib
+        matplotlib.use("Agg")
+        import plotly.express as px
+        from pandasai import Agent
+        from pandasai_openai import OpenAI as PAIOpenAI
+        llm = PAIOpenAI(api_token=os.getenv("OPENAI_API_KEY"))
+
+        plotly_instruction = """
+                You are analyzing a pandas DataFrame.
+
+                Rules for charts:
+                - Use Plotly only.
+                - Do NOT use matplotlib.
+                - Do NOT use seaborn.
+                - Prefer plotly.express unless a lower-level Plotly graph object is clearly needed.
+                - If the user asks for a chart, graph, plot, or visualization, create it with Plotly.
+                - Return a concise written summary along with the result.
+                - If you generate a chart, save it instead of trying to display it inline.
+                """
+
+        agent = Agent(
+            df, 
+            config={"llm": llm,
+                    "save_charts":True,
+                    "verbose": True,
+                    })
+        result = agent.chat(f"{plotly_instruction}\n\nUser request: {query}")
+        result_str = str(result) if result is not None else "No result from analysis."
+    except Exception as e:
+        logger.exception("PandasAI run failed: %s", e)
+        result_str = f"Data analysis could not be completed: {e}"
+
+    return {"final_report": result_str}
+
 # -------------------------------------------------------------------
 # FUSION / ANALYSIS
 # -------------------------------------------------------------------
@@ -253,29 +379,7 @@ def fuse_findings(state: GraphState) -> GraphState:
         "earthquakes": snapshot.get("earthquakes", [])[:10],
     }
 
-    system_prompt = """
-        You are a threat intelligence fusion geopolitical analyst for a real-time OSINT monitoring platform.
-
-        Your job:
-        - identify the most important developments
-        - prioritize signal over noise
-        - use concrete metrics from the input
-        - avoid speculation
-        - clearly state uncertainty
-        - produce concise analyst-style findings
-        - group findings by region
-        - add a final paragraph speculating vulnerabilities or chain reactions that could occur as a result of the latest developments.
-
-        Rules:
-        - Prefer developments supported by multiple indicators
-        - If evidence is weak, say so
-        - Do not invent facts not present in the input
-        - Focus on operational significance, not generic summaries
-        - Return no more than 15 findings
-        - Confidence must be one of: high, medium, low
-        - Compare the current developments with a summary of the last several hours
-        - Specify the latest timestamp of the message_date
-        """
+    system_prompt = load_prompt(FUSION_PROMPT_PATH)
 
     human_prompt = f"""
         Analyze this latest intelligence snapshot and return a structured fused assessment.
@@ -305,6 +409,95 @@ def fuse_findings(state: GraphState) -> GraphState:
 
     return {"fused_analysis": fused_analysis}
 
+class ForecastItem(BaseModel):
+    scenario: str = Field(..., description="Short statement of a plausible near-term development")
+    likelihood: str = Field(..., description="One of: high, medium, low")
+    rationale: str = Field(..., description="Why this scenario is plausible based on the evidence")
+    indicators: list[str] = Field(
+        default_factory=list,
+        description="Specific indicators to monitor that would support or weaken this scenario",
+    )
+
+class ForecastImplications(BaseModel):
+    outlook: str = Field(
+        ...,
+        description="One short paragraph summarizing the near-term outlook over the next few days",
+    )
+    plausible_chain_reactions: list[ForecastItem] = Field(
+        default_factory=list,
+        description="Plausible near-term chain reactions grounded in recent developments",
+    )
+    vulnerabilities: list[str] = Field(
+        default_factory=list,
+        description="Operational vulnerabilities or openings created by the latest developments",
+    )
+    monitoring_priorities: list[str] = Field(
+        default_factory=list,
+        description="Highest-priority things to monitor next",
+    )
+    confidence: str = Field(..., description="One of: high, medium, low")
+
+def forecast_implications(state: GraphState) -> GraphState:
+    """
+    Generate a constrained near-term implications assessment.
+    This should remain clearly separated from factual fusion.
+    """
+    fused = state.get("fused_analysis", {}) or {}
+    retrieved = state.get("retrieved_data", {}) or {}
+
+    request_text = state.get("user_request", "")
+    countries = state.get("countries", []) or []
+    event_types = state.get("event_types", []) or []
+    time_window = state.get("time_window", "last_hour")
+
+    snapshot = retrieved.get("intel_snapshot", {}) or {}
+    hourly_anomalies = retrieved.get("hourly_anomalies", []) or []
+
+    payload = {
+        "user_request": request_text,
+        "time_window": time_window,
+        "countries": countries,
+        "event_types": event_types,
+        "fused_analysis": {
+            "overall_assessment": fused.get("overall_assessment", ""),
+            "top_findings": fused.get("top_findings", [])[:6],
+        },
+        "summary_counts": snapshot.get("summary_counts", {}),
+        "recent_clusters": snapshot.get("recent_clusters", [])[:12],
+        "hourly_anomalies": hourly_anomalies[:12],
+        "stock_alerts": snapshot.get("stock_alerts", [])[:8],
+        "earthquakes": snapshot.get("earthquakes", [])[:8],
+    }
+
+    system_prompt = load_prompt(FORECAST_PROMPT_PATH)
+
+    human_prompt = f"""
+        Assess the near-term implications of this intelligence picture over the next few days.
+
+        Evidence payload:
+        {payload}
+        """.strip()
+
+    llm = ChatOpenAI(
+        model="gpt-4.1-mini",
+        temperature=0,
+    )
+
+    structured_llm = llm.with_structured_output(
+        ForecastImplications,
+        method="json_schema",
+    )
+
+    result = structured_llm.invoke(
+        [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": human_prompt},
+        ]
+    )
+
+    forecast_analysis = result.model_dump()
+
+    return {"forecast_analysis": forecast_analysis}
 
 # -------------------------------------------------------------------
 # FORMATTER
@@ -313,6 +506,8 @@ def fuse_findings(state: GraphState) -> GraphState:
 def format_response(state: GraphState) -> GraphState:
     print(">>> RUNNING format_response")
     analysis = state.get("fused_analysis", {}) or {}
+    forecast = state.get("forecast_analysis", {}) or {}
+
     findings = analysis.get("top_findings", []) or []
     overall = analysis.get("overall_assessment", "No major developments detected.")
 
@@ -343,10 +538,50 @@ def format_response(state: GraphState) -> GraphState:
     else:
         parts.append("\nNo significant findings in the latest snapshot.")
 
+    outlook = forecast.get("outlook", "").strip()
+    chain_reactions = forecast.get("plausible_chain_reactions", []) or []
+    vulnerabilities = forecast.get("vulnerabilities", []) or []
+    monitoring_priorities = forecast.get("monitoring_priorities", []) or []
+    forecast_confidence = forecast.get("confidence", "unknown").upper()
+
+    if outlook or chain_reactions or vulnerabilities or monitoring_priorities:
+        forecast_parts = []
+
+        if outlook:
+            forecast_parts.append(outlook)
+
+        if chain_reactions:
+            scenario_lines = []
+            for item in chain_reactions[:3]:
+                scenario = item.get("scenario", "Unnamed scenario")
+                likelihood = item.get("likelihood", "unknown").upper()
+                rationale = item.get("rationale", "")
+                indicators = item.get("indicators", []) or []
+
+                line = f"• {scenario} ({likelihood})"
+                if rationale:
+                    line += f" — {rationale}"
+                if indicators:
+                    line += f" Watch for: {', '.join(indicators[:4])}"
+                scenario_lines.append(line)
+
+            forecast_parts.append("Plausible chain reactions:\n" + "\n".join(scenario_lines))
+
+        if vulnerabilities:
+            vulnerability_lines = [f"• {item}" for item in vulnerabilities[:4]]
+            forecast_parts.append("Emerging vulnerabilities:\n" + "\n".join(vulnerability_lines))
+
+        if monitoring_priorities:
+            monitoring_lines = [f"• {item}" for item in monitoring_priorities[:5]]
+            forecast_parts.append("Monitoring priorities:\n" + "\n".join(monitoring_lines))
+
+        forecast_parts.append(f"Assessment confidence: {forecast_confidence}")
+        parts.append("\nNear-term implications:\n" + "\n\n".join(forecast_parts))
+
     final_report = "\n".join(parts).strip()
 
     print(">>> RETURNING final_response")
-    print(final_report)
+    #print(final_report)
 
     return {"final_report": final_report}
 
@@ -360,15 +595,28 @@ def build_graph():
 
     graph.add_node("parse_request", parse_request)
     graph.add_node("plan_queries", plan_queries)
+    graph.add_node("route_analysis", route_analysis_node)
     graph.add_node("retrieve_intel", retrieve_intel)
+    graph.add_node("run_pandas_ai", run_pandas_ai)
     graph.add_node("fuse_findings", fuse_findings)
+    graph.add_node("forecast_implications", forecast_implications)
     graph.add_node("format_response", format_response)
 
     graph.add_edge(START, "parse_request")
     graph.add_edge("parse_request", "plan_queries")
-    graph.add_edge("plan_queries", "retrieve_intel")
+    graph.add_edge("plan_queries", "route_analysis")
+    graph.add_conditional_edges(
+        "route_analysis",
+        route_analysis_edges,
+        {
+            "intel_path": "retrieve_intel",
+            "pandas_ai": "run_pandas_ai",
+        },
+    )
+    graph.add_edge("run_pandas_ai", END)
     graph.add_edge("retrieve_intel", "fuse_findings")
-    graph.add_edge("fuse_findings", "format_response")
+    graph.add_edge("fuse_findings", "forecast_implications")
+    graph.add_edge("forecast_implications", "format_response")
     graph.add_edge("format_response", END)
 
     return graph.compile()
@@ -392,11 +640,14 @@ def save_graph_visualization():
     except Exception as e:
         print(f"Could not generate graph visualization: {e}\n")
 
+def run_agent(user_request: str) -> str:
+    result = graph.invoke({"user_request": user_request})
+    return result.get("final_report", "I ran the workflow but no final report was produced.")
 
 if __name__ == "__main__":
-    result = graph.invoke(
-        {"user_request": "What's happening today?"}
-    )
+    #result = graph.invoke(
+    #    {"user_request": "What are the latest developments"}
+    #)
     save_graph_visualization()
     #print("\n=== RESULT TYPE ===")
     #print(type(result))
@@ -407,5 +658,5 @@ if __name__ == "__main__":
     #print("\n=== FULL RESULT ===")
     #print(result)
 
-    print("\n=== FINAL RESPONSE ===")
-    print(result.get("final_report", "final_report key missing"))
+    #print("\n=== FINAL RESPONSE ===")
+    #print(result.get("final_report", "final_report key missing"))

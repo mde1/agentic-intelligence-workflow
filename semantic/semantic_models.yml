@@ -1,62 +1,365 @@
 telegram_messages:
-  description: Raw Telegram OSINT event messages
+  description: >
+    Raw Telegram OSINT event messages. Each row is a single source message from a
+    Telegram channel. Best for message-level inspection, source review, entity
+    extraction, and finding example reports behind higher-level aggregates.
+  format: SQL
+  database: "db/telegram_channels.db"
+
+  grain: one row per Telegram message
+  primary_time_field: message_date
+
   dimensions:
+    message_id:
+      type: identifier
+      description: Unique identifier for the Telegram message
+
     message_date:
       type: time
+      description: Timestamp when the Telegram message was posted
+
     channel_username:
       type: categorical
+      description: Telegram channel username that published the message
+
     country:
       type: categorical
+      description: Country inferred from message text or tagging pipeline
+
     event_type:
       type: categorical
+      description: Normalized event label such as impact, launch, interception, or explosion
 
-  metrics:
+  measures:
     message_count:
       type: count
+      description: Count of Telegram event messages
 
-telegram_event_clusters:
-  description: Burst clusters of related event reports
+  analysis_hints:
+    best_for:
+      - raw source inspection
+      - tracing example messages behind clusters
+      - channel-level review
+      - entity extraction
+    not_ideal_for:
+      - anomaly scoring
+      - burst-level trend analysis
+    common_filters:
+      - country
+      - event_type
+      - channel_username
+      - message_date
+
+telegram_cluster_metrics_recent:
+  description: >
+    Recent burst clusters of Telegram event reports. Each row represents a short-lived
+    cluster of closely timed messages for the same event type and geographic grouping.
+    Clusters are useful for identifying concentrated operational activity, coordinated
+    reporting bursts, and multi-channel corroboration.
+  format: SQL
+  database: "db/telegram_channels.db"
+  semantic_purpose: >
+    Use this table for recent burst activity, concentrated operational events,
+    and executive-style summaries of the latest developments.
+
+
+  grain: one row per event_cluster_id
+  primary_time_field: cluster_start
 
   dimensions:
-    cluster_start:
-      type: time
-    country:
-      type: categorical
+    event_cluster_id:
+      type: identifier
+      description: Unique cluster identifier built from event_type, geo_group, and cluster sequence
+
     event_type:
       type: categorical
+      description: Normalized event label for all messages in the cluster
 
-  metrics:
+    geo_group:
+      type: categorical
+      description: >
+        Geographic grouping key used for clustering. May represent a normalized location key,
+        a country, or 'unknown' depending on clustering mode and geography extraction
+
+    country:
+      type: categorical
+      description: Most common country associated with messages in the cluster
+
+    location_key:
+      type: categorical
+      description: Normalized location key when clustering at the location level
+
+    location_text:
+      type: text
+      description: Human-readable matched location term from message text
+
+    cluster_start:
+      type: time
+      description: Timestamp of the first message in the cluster
+
+    cluster_end:
+      type: time
+      description: Timestamp of the last message in the cluster
+
+    channels:
+      type: text
+      description: Comma-separated list of Telegram channel usernames contributing to the cluster
+
+    sample_text:
+      type: text
+      description: Representative message text from the cluster, useful for summaries and qualitative review
+
+    entities:
+      type: text
+      description: Comma-separated tagged entities extracted from the cluster messages
+
+    window_label:
+      type: categorical
+      description: Time window used to build the recent clusters, such as last_hour or last_day
+
+    cluster_level:
+      type: categorical
+      description: >
+        Geographic grouping level used to build the cluster. Usually location or country
+
+    computed_at:
+      type: time
+      description: Timestamp when the cluster metrics were generated
+
+  measures:
     message_count:
       type: sum
+      description: Number of Telegram messages in the cluster
+
     channel_count:
       type: count_distinct
+      description: Number of distinct Telegram channels contributing to the cluster
+
+    duration_seconds:
+      type: number
+      description: Time span between the first and last message in the cluster
+
     severity_score:
       type: number
+      description: >
+        Heuristic importance score for the cluster, currently computed as
+        message_count + 2 * channel_count
+
+  analysis_hints:
+    best_for:
+      - recent burst detection
+      - multi-channel corroboration
+      - identifying concentrated operational activity
+      - executive summaries of the latest developments
+    interpretation_notes:
+      - higher severity_score usually indicates a more operationally important cluster
+      - channel_count helps distinguish broader corroborated activity from single-source reporting
+      - cluster_level determines whether clusters are grouped by normalized location or by country
+      - window_label allows comparison between shorter and longer recent periods
+    derived_from:
+      - telegram_messages
+    common_filters:
+      - window_label
+      - cluster_level
+      - country
+      - event_type
+      - severity_score
+  routing_hints:
+    preferred_for:
+      - latest developments
+      - recent incidents
+      - concentrated activity
+      - multi-channel corroborated bursts
+    avoid_for:
+      - baseline anomaly scoring
+      - long historical trend analysis
+    routing_keywords:
+      - latest
+      - recent
+      - developments
+      - incidents
+      - bursts
+      - cluster
 
 telegram_event_hourly:
-  description: Hourly event aggregates used for anomaly detection
+  description: >
+    Hourly event aggregates derived from Telegram event messages. Each row
+    summarizes event volume for one hour, one country, and one event type.
+    This table is the baseline input for anomaly detection.
+  format: SQL
+  database: "db/telegram_channels.db"
+
+  grain: one row per hour_bucket, country, event_type
+  primary_time_field: hour_bucket
 
   dimensions:
     hour_bucket:
       type: time
+      description: UTC hour bucket for the aggregated activity window
+
     country:
       type: categorical
+      description: Country inferred from message text; Unknown if no geography was matched
+
     event_type:
       type: categorical
+      description: Normalized event label grouped into the hourly aggregate
 
-  metrics:
+    computed_at:
+      type: time
+      description: Timestamp when the hourly aggregate row was generated
+
+  measures:
     message_count:
       type: sum
+      description: Number of event messages observed in that hour/country/event_type bucket
+
     unique_channels:
       type: count_distinct
+      description: Number of distinct Telegram channels contributing messages to that hourly bucket
 
+  analysis_hints:
+    best_for:
+      - hourly trend charts
+      - baseline activity comparisons
+      - event tempo analysis
+      - cross-country and cross-event comparisons
+    derived_from:
+      - telegram_messages
+    common_filters:
+      - hour_bucket
+      - country
+      - event_type
+
+telegram_hourly_anomalies:
+  description: >
+    Latest-hour anomaly assessment for Telegram event activity. Each row compares
+    the most recent hour for a country and event type against a rolling baseline,
+    typically the prior 7 days. Useful for identifying spikes, unusual surges,
+    and above-baseline activity.
+  format: SQL
+  database: "db/telegram_channels.db"
+  semantic_purpose: >
+    Use this table when the user asks what activity is unusual, spiking, above
+    baseline, or anomalous in the latest hourly window.
+
+
+  grain: one row per latest hour_bucket, country, event_type
+  primary_time_field: hour_bucket
+
+  dimensions:
+    hour_bucket:
+      type: time
+      description: Latest hour being evaluated for anomaly status
+
+    country:
+      type: categorical
+      description: Country associated with the current-hour activity
+
+    event_type:
+      type: categorical
+      description: Event type being evaluated against its historical baseline
+
+    is_anomaly:
+      type: boolean
+      description: >
+        Flag indicating whether the latest hour met anomaly criteria based on
+        minimum volume, minimum baseline history, and either spike ratio or z-score threshold
+
+    anomaly_reason:
+      type: text
+      description: >
+        Human-readable explanation of why the row was flagged, such as message spike,
+        channel spike, or high z-score
+
+    computed_at:
+      type: time
+      description: Timestamp when anomaly metrics were computed
+
+  measures:
+    current_message_count:
+      type: sum
+      description: Number of event messages observed in the latest hour
+
+    current_unique_channels:
+      type: count_distinct
+      description: Number of distinct channels contributing to the latest hour
+
+    baseline_avg_messages:
+      type: average
+      description: Mean hourly message count over the baseline comparison window
+
+    baseline_std_messages:
+      type: number
+      description: Standard deviation of hourly message count over the baseline window
+
+    baseline_avg_channels:
+      type: average
+      description: Mean hourly distinct-channel count over the baseline comparison window
+
+    baseline_std_channels:
+      type: number
+      description: Standard deviation of hourly distinct-channel count over the baseline window
+
+    baseline_points:
+      type: count
+      description: Number of historical hourly points available for baseline comparison
+
+    spike_ratio:
+      type: ratio
+      description: Current message count divided by baseline average message count
+
+    channel_spike_ratio:
+      type: ratio
+      description: Current channel count divided by baseline average channel count
+
+    zscore_messages:
+      type: number
+      description: Z-score of the latest message count versus historical hourly message counts
+
+    zscore_channels:
+      type: number
+      description: Z-score of the latest distinct-channel count versus historical channel counts
+
+  analysis_hints:
+    best_for:
+      - detecting above-baseline activity
+      - prioritizing unusual country/event combinations
+      - explaining why the latest hour stands out
+    interpretation_notes:
+      - is_anomaly usually requires enough baseline history, sufficient current volume, and either a spike ratio or z-score threshold
+      - spike_ratio and zscore_messages are usually the strongest fields for prioritizing important anomalies
+      - channel_spike_ratio helps distinguish broader multi-source surges from isolated chatter
+    derived_from:
+      - telegram_event_hourly
+    common_filters:
+      - is_anomaly
+      - country
+      - event_type
+      - hour_bucket
+  routing_hints:
+    preferred_for:
+      - anomaly detection
+      - above-baseline activity
+      - surge detection
+      - unusual hourly activity
+    avoid_for:
+      - qualitative summaries of specific incidents
+      - message-level source review
+    routing_keywords:
+      - anomaly
+      - spike
+      - surge
+      - unusual
+      - above baseline
+  
 
 news_feed_posts:
     description:
       RSS or news-feed posts stored in news_feeds.db. These posts provide
       contextual geopolitical and breaking-news coverage that can corroborate
       Telegram events, anomaly spikes, and regional developments.
-
+    format: SQL
     database: news_feeds.db
     table: posts
 
@@ -198,3 +501,250 @@ twz_feed_posts:
         type: count_distinct
         sql: author
         description: Number of distinct authors
+
+usgs_earthquakes:
+  description: >
+    Seismic activity from the USGS earthquake monitoring feed. Each row
+    represents one earthquake event detected within the latest 24-hour feed.
+
+  category: geophysical_events
+  semantic_purpose: >
+    Use this table for earthquake charts, earthquake counts, magnitude analysis,
+    location-based summaries, and recent seismic activity over time.
+
+  data_source:
+    type: sqlite
+    database: db/market_osint.db
+    table: usgs_earthquakes
+
+  grain: one row per earthquake event
+  primary_time_field: time
+
+  geo_fields:
+    longitude:
+      type: numeric
+      description: Longitude of the earthquake epicenter
+    latitude:
+      type: numeric
+      description: Latitude of the earthquake epicenter
+
+  dimensions:
+    usgs_id:
+      type: identifier
+      description: Unique USGS event identifier
+
+    title:
+      type: text
+      description: Full USGS event title
+
+    location:
+      type: text
+      description: Human-readable place description for the earthquake
+
+    type:
+      type: categorical
+      description: Event type, usually earthquake
+
+    time:
+      type: time
+      description: Timestamp when the earthquake occurred
+
+    updated_time:
+      type: time
+      description: Timestamp when the USGS record was last updated
+
+  measures:
+    magnitude:
+      type: numeric
+      description: Earthquake magnitude
+
+    depth_km:
+      type: numeric
+      description: Depth of the earthquake in kilometers
+
+  routing_hints:
+    preferred_for:
+      - earthquake charts
+      - earthquake counts
+      - recent seismic activity
+      - magnitude trends
+      - mapping earthquakes
+      - earthquake summaries by location
+    avoid_for:
+      - telegram anomaly analysis
+      - stock price analysis
+      - stock alert summaries
+    routing_keywords:
+      - earthquake
+      - earthquakes
+      - seismic
+      - magnitude
+      - epicenter
+      - quake
+      - quakes
+      - tremor
+
+  query_examples:
+    - chart earthquakes from the last 24 hours
+    - show the strongest earthquakes in the latest feed
+    - summarize recent seismic activity
+    - map earthquake magnitudes by location
+  
+
+stocks_data_long:
+  description: >
+    Historical daily stock prices in long format. Each row represents the price
+    of a single ticker on a specific trading date. This table is ideal for
+    charting trends, comparing companies, and calculating performance metrics.
+  category: financial_market_data
+  semantic_purpose: >
+    Use this table for stock price trends, ticker comparisons, and time-series charts.
+
+  data_source:
+    type: sqlite
+    database: db/market_data.db
+    table: stocks_data_long
+
+  grain: one row per ticker per date
+
+  primary_time_field: Date
+
+  dimensions:
+    Date:
+      type: time
+      description: Trading date
+
+    Ticker:
+      type: categorical
+      description: Stock ticker symbol
+
+  measures:
+    Price:
+      type: numeric
+      description: Closing or adjusted closing price for the ticker on that date
+
+  analysis_hints:
+    best_for:
+      - price charts
+      - ticker comparisons
+      - trend analysis
+      - rolling averages
+      - volatility analysis
+
+    example_questions:
+      - chart NVDA over the last 30 days
+      - compare AAPL and MSFT price performance
+      - show the highest priced stocks in the dataset
+  routing_hints:
+    preferred_for:
+      - stock price charts
+      - comparing tickers
+      - trend analysis
+      - performance over time
+      - moving averages
+    avoid_for:
+      - stock alert summaries
+      - anomaly/event-style alert queries
+    routing_keywords:
+      - stock price
+      - chart
+      - compare
+      - ticker
+      - performance
+      - trend
+
+stocks_data_wide:
+  description: >
+    Historical daily stock prices in wide format where each ticker is a column.
+    This table is mainly used for compatibility with spreadsheet-style analysis.
+  category: financial_market_data
+
+  data_source:
+    type: sqlite
+    database: db/market_data.db
+    table: stocks_data_wide
+
+  grain: one row per trading date
+
+  primary_time_field: Date
+
+  dimensions:
+    Date:
+      type: time
+      description: Trading date
+
+  measures:
+    ticker_columns:
+      type: numeric
+      description: Each ticker column represents the price for that company on the given date
+
+  analysis_hints:
+    best_for:
+      - spreadsheet style inspection
+      - exporting to Excel
+    not_ideal_for:
+      - LLM generated charting
+      - multi-stock comparisons
+
+stock_alerts:
+  description: >
+    Event-style alerts generated from unusual stock behavior such as extreme
+    price movements or sustained declines.
+  category: financial_market_data
+  semantic_purpose: >
+    Use this table for alert-driven questions about unusual stock behavior,
+    triggered signals, and recent market warnings.
+
+  data_source:
+    type: sqlite
+    database: db/market_data.db
+    table: stock_alerts
+
+  grain: one row per ticker alert event
+
+  primary_time_field: Date
+
+  dimensions:
+    Date:
+      type: time
+      description: Date the alert was triggered
+
+    Ticker:
+      type: categorical
+      description: Stock ticker symbol associated with the alert
+
+    Alert:
+      type: categorical
+      description: Alert category such as Spike/Drop or 3-Day Decline
+
+  measures:
+    alert_count:
+      type: count
+      description: Number of alerts triggered
+
+  analysis_hints:
+    best_for:
+      - identifying unusual market activity
+      - highlighting potential trading signals
+      - summarizing recent alerts
+
+    example_questions:
+      - what stock alerts occurred this week
+      - which tickers triggered the most alerts
+      - show recent spike or drop alerts
+  routing_hints:
+    preferred_for:
+      - unusual stock behavior
+      - recent alerts
+      - spike or drop events
+      - decline alerts
+    avoid_for:
+      - price trend charts
+      - continuous time-series analysis
+    routing_keywords:
+      - alert
+      - unusual
+      - spike
+      - drop
+      - decline
+      - triggered
