@@ -469,7 +469,7 @@ def forecast_implications(state: GraphState) -> GraphState:
         "earthquakes": snapshot.get("earthquakes", [])[:8],
     }
 
-    system_prompt = load_prompt(FORECAST_PROMPT_PATH)
+    system_prompt = load_prompt("agents/prompts/forecast_implications.txt")
 
     human_prompt = f"""
         Assess the near-term implications of this intelligence picture over the next few days.
