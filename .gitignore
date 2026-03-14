@@ -33,7 +33,7 @@ Thumbs.db
 datasets/
 exports/
 pandasai.log
-*.ipynb
+pandasai_quickstart_guide.ipynb
 
 #Telethon
 *.session
