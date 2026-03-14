@@ -1,78 +1,48 @@
-# Overall Workflow
+#Agentic OSINT Intelligence Monitor
+A LangGraph-powered intelligence monitoring system that aggregates open-source signals and produces real-time situational summaries.
 
-## Run Main Update Scripts
-1. telethon_update.py - 15 mins
-2. wsj_update.py - hourly
-3. warzone_update.py - hourly
-4. usgs_update.py - 15 mins
-5. stocks_update.py - daily
+The system ingests multiple OSINT data streams (Telegram, news feeds, market signals, seismic events), detects anomalies, and produces analyst-style intelligence reports via a conversational interface.
 
-## Run anomaly detection scoring
-1. Latest events and severity
+Currently the system operates through a Slack bot (Socket Mode), but the architecture is designed to evolve into a full web-based intelligence dashboard.
 
-## Agent 1
-1. Glean war locations (countries)
-2. Run firms_update.py for countries where events occurred since last update
-(maybe store each country's points in a separate dataframe or group by region)
+#System Overview
 
-## Agent 2
-1. Analyze how the events might be interrelated
+This project experiments with agentic intelligence workflows applied to real-time OSINT monitoring.
 
-## Agent 3
-1. Analyze the output and format a report
+The system performs four core tasks:
+- Collect signals from multiple OSINT sources
+- Detect anomalies or unusual activity
+- Fuse evidence across sources
+- Generate structured intelligence summaries
+- The result is an automated analyst capable of answering questions like:
 
-Node 1: request parser
+```
+What happened in the last hour?
+Are there unusual spikes in Israel today?
+Summarize major developments since the last update
+```
+# Architecture
+The system uses a LangGraph agent workflow to process requests and generate reports.
+``` Slack
+  ↓
+Slackbot (Socket Mode)
+  ↓
+LangGraph Agent
+  ↓
+FastAPI Data Services
+  ↓
+SQLite Intelligence Databases ```
 
-Takes user request like:
-“What happened in the last hour?”
-“Show anomalies near Iraq”
-“Summarize major changes since last update”
+#Agent Workflow
+The core agent pipeline follows a structured reasoning process.
 
-Outputs:
+1. Request Parser
+Interprets the user's natural-language request.
+Example inputs:
+
+
+Extracted signals:
 time window
-geography
-sources needed
-task type
-
-Node 2: planner
-Determines what data to pull.
-Example:
-if geography requested → query Telegram + FIRMS + USGS + news
-if market question → query stocks + related geopolitical events
-if daily summary → pull latest fused alerts
-This node should produce a structured plan, not prose.
-
-Node 3: retrieval node
-Runs the actual data queries.
-This should call helper functions like:
-get_recent_telegram_events()
-get_recent_firms_by_country()
-get_recent_earthquakes()
-get_stock_anomalies()
-get_fused_alerts()
-
-Node 4: fusion/reasoning node
-This is where the LLM actually earns its keep.
-It looks across retrieved evidence and decides things like:
-likely same event
-weak correlation
-no corroboration
-possible rumor
-likely escalation
-likely unrelated
-This is your real “intel” node.
-
-Node 5: report formatter
-Turns the fused output into:
-Slack summary
-analyst report
-dashboard card text
-alert blurb
-
-Optional Node 6: memory/state node
-Stores:
-last update time
-last countries checked
-previous report context
-recent alert IDs already reported
-Useful, but keep it light.
+countries mentioned
+event types
+analysis mode
