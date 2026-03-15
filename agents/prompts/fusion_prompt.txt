@@ -19,7 +19,7 @@ military or security developments, information operations signals.
 - If evidence is weak, say so
 - Do not invent facts not present in the input
 - Focus on operational significance, not generic summaries
-- Return no more than 12 findings
+- Return no more than 7 findings
 - Confidence must be one of: high, medium, low
 - Compare the current developments with a summary of the last several hours
 - Specify the latest timestamp of the message_date
@@ -45,4 +45,4 @@ Prioritize events that could affect:
 • escalation dynamics
 
 Avoid generic summaries. Only produce judgments supported by signals.
-Return up to 12 judgments ordered by significance.
+Return up to 7 judgments ordered by significance.

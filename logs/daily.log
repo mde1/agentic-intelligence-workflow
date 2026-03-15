@@ -845,3 +845,61 @@ STDERR:
 Finished pipeline: Daily Pipeline
 ==============================
 All steps completed successfully.
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Wrote wide stock data to: db/StockData.xlsx
+Wrote long stock data to: db/StockData_long.xlsx
+Wrote stock alerts to: db/stockalerts.xlsx
+Wrote SQLite database to: db/market_data.db
+
+Sample stock prices:
+Ticker       Date        AAPL        AMZN  ...          WM        WMT         XOM
+0      2025-03-14  212.563568  197.949997  ...  221.503632  84.540771  108.182922
+1      2025-03-17  213.071350  195.740005  ...  224.783920  86.630768  109.981133
+2      2025-03-18  211.767014  192.820007  ...  222.498550  84.778496  109.865105
+3      2025-03-19  214.305969  195.539993  ...  223.966293  85.511482  111.576317
+4      2025-03-20  213.170914  194.949997  ...  223.513168  84.996407  112.050041
+
+[5 rows x 44 columns]
+
+Sample long-format prices:
+        Date Ticker       Price
+0 2025-03-14   AAPL  212.563568
+1 2025-03-17   AAPL  213.071350
+2 2025-03-18   AAPL  211.767014
+3 2025-03-19   AAPL  214.305969
+4 2025-03-20   AAPL  213.170914
+
+Recent alerts:
+         Date Ticker          Alert
+0  2026-03-11   AVAV  3-Day Decline
+1  2026-03-11     BA  3-Day Decline
+2  2026-03-11    CRM  3-Day Decline
+3  2026-03-11     GD  3-Day Decline
+4  2026-03-11    IBM  3-Day Decline
+5  2026-03-11    LMT  3-Day Decline
+6  2026-03-11     MA  3-Day Decline
+7  2026-03-11   NFLX  3-Day Decline
+8  2026-03-11    NOC  3-Day Decline
+9  2026-03-11      V  3-Day Decline
+10 2026-03-12     BA  3-Day Decline
+11 2026-03-12    IBM  3-Day Decline
+12 2026-03-12    JPM  3-Day Decline
+13 2026-03-12     MA  3-Day Decline
+14 2026-03-12    MRK  3-Day Decline
+15 2026-03-12   MSFT  3-Day Decline
+16 2026-03-12   NFLX  3-Day Decline
+17 2026-03-12      V  3-Day Decline
+18 2026-03-13   AAPL  3-Day Decline
+19 2026-03-13   AMZN  3-Day Decline
+[OK] Stocks Update completed in 4.98s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.

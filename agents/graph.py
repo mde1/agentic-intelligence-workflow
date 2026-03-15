@@ -7,7 +7,7 @@ from langgraph.graph import StateGraph, START, END
 ## testing multiple models
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
-from langchain_groq import ChatGroq
+from langchain_xai import ChatXAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 import logging
@@ -21,7 +21,7 @@ from os import PathLike
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-GROK_API_KEY = os.getenv("GROK_API_KEY")
+XAI_API_KEY = os.getenv("XAI_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
@@ -29,13 +29,13 @@ logger = logging.getLogger(__name__)
 #AGENT_NAME = "request_parser_agent"
 
 LLM_MODELS = {
-    "openai": ChatOpenAI(model="gpt-4.1-mini", temperature=0),
-    "grok": ChatGroq(model="grok-4-1-fast-reasoning", temperature=0),
-    "anthropic": ChatAnthropic(model="claude-haiku-4-5-20251001", temperature=0),
+    "openai": ChatOpenAI(model="gpt-5.4-2026-03-05", temperature=0),
+    "grok": ChatXAI(model="grok-4-1-fast-reasoning", temperature=0),
+    "anthropic": ChatAnthropic(model="claude-opus-4-6", temperature=0),
     "google": ChatGoogleGenerativeAI(model="gemini-3.1-pro-preview", temperature=0),
 }
 
-MODEL = LLM_MODELS["anthropic"] # test different models
+MODEL = LLM_MODELS["openai"] # test different models
 
 # -------------------------------------------------------------------
 # CONFIG
