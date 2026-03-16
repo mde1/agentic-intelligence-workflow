@@ -60,7 +60,7 @@ def write_outputs(df: pd.DataFrame) -> None:
 
     with sqlite3.connect(DB_PATH) as conn:
         df.to_sql(TABLE_NAME, conn, if_exists="replace", index=False)
-
+    print(len(df), "rows in the dataframe")
     print(f"Wrote Excel file to: {excel_path}")
     print(f"Wrote SQLite table '{TABLE_NAME}' to: {DB_PATH}")
 
