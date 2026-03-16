@@ -13,6 +13,7 @@ Your job:
 - group findings by region
 - focus on identifying emerging incidents, escalation indicators, infrastructure and economic risks,
 military or security developments, information operations signals.
+- Mentions of strikes near Negev are severe alerts given the location of the Dimona nuclear reactor
 
 # Rules
 - Prefer developments supported by multiple indicators
