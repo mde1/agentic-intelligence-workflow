@@ -23,10 +23,10 @@ def safe_query(conn: sqlite3.Connection, query: str, params=None) -> pd.DataFram
 def get_latest_intel(
     cluster_window: str = Query("last_hour", pattern="^(last_hour|last_day)$"),
     cluster_level: str = Query("location", pattern="^(location|country)$"),
-    anomaly_limit: int = Query(25, ge=1, le=200),
-    cluster_limit: int = Query(25, ge=1, le=200),
-    stock_limit: int = Query(25, ge=1, le=200),
-    earthquake_limit: int = Query(25, ge=1, le=200),
+    anomaly_limit: int = Query(25, ge=0, le=200),
+    cluster_limit: int = Query(25, ge=0, le=200),
+    stock_limit: int = Query(25, ge=0, le=200),
+    earthquake_limit: int = Query(25, ge=0, le=200),
 ):
     conn = get_connection()
     try:
