@@ -1,143 +1,211 @@
-from __future__ import annotations
-
-from datetime import datetime, timezone
-import sqlite3
-from pathlib import Path
-
-import pandas as pd
 from fastapi import APIRouter, Query
+import sqlite3
+import pandas as pd
+import numpy as np
+from datetime import datetime, timezone
+from pathlib import Path
 
 router = APIRouter()
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-TELEGRAM_DB = PROJECT_ROOT / "db" / "telegram_channels.db"
-MARKET_DB = PROJECT_ROOT / "db" / "market_data.db"
-MARKET_OSINT_DB = PROJECT_ROOT / "db" / "market_osint.db"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DB_DIR = PROJECT_ROOT / "db"
+
+TELEGRAM_DB = DB_DIR / "telegram_channels.db"
+MARKETS_DB = DB_DIR / "market_data.db"
+EARTHQUAKE_DB = DB_DIR / "earthquakes.db"  # change if your real filename differs
 
 
-def get_connection(db_path: str | Path) -> sqlite3.Connection:
-    conn = sqlite3.connect(str(db_path))
-    conn.row_factory = sqlite3.Row
-    return conn
+def db_exists(path: Path) -> bool:
+    return path.exists()
 
 
-def safe_query(conn: sqlite3.Connection, query: str, params: list | tuple | None = None) -> pd.DataFrame:
+def safe_query(db_path: Path, query: str, params=None) -> pd.DataFrame:
+    """
+    Execute a query safely against a SQLite database.
+    Returns an empty DataFrame if the database, table, or query fails.
+    """
+    if not db_exists(db_path):
+        return pd.DataFrame()
+
     try:
-        return pd.read_sql_query(query, conn, params=params or [])
+        with sqlite3.connect(db_path) as conn:
+            return pd.read_sql_query(query, conn, params=params or [])
     except Exception:
         return pd.DataFrame()
 
 
+def clean_value(value):
+    if pd.isna(value):
+        return None
+    if isinstance(value, (pd.Timestamp, datetime)):
+        return value.isoformat()
+    if isinstance(value, float) and (np.isnan(value) or np.isinf(value)):
+        return None
+    return value
+
+
+def clean_records(df: pd.DataFrame) -> list[dict]:
+    if df.empty:
+        return []
+
+    cleaned = df.copy()
+
+    # Convert datetime-like columns safely
+    for col in cleaned.columns:
+        if pd.api.types.is_datetime64_any_dtype(cleaned[col]):
+            cleaned[col] = cleaned[col].astype("object")
+
+    records = cleaned.to_dict(orient="records")
+    return [
+        {k: clean_value(v) for k, v in row.items()}
+        for row in records
+    ]
+
+
+def get_latest_hour() -> str | None:
+    latest_hour_df = safe_query(
+        TELEGRAM_DB,
+        """
+        SELECT MAX(hour_bucket) AS latest_hour
+        FROM telegram_hourly_anomalies
+        """,
+    )
+    if latest_hour_df.empty:
+        return None
+
+    latest_hour = latest_hour_df.iloc[0].get("latest_hour")
+    return str(latest_hour) if pd.notna(latest_hour) else None
+
+
+def get_hourly_anomalies(latest_hour: str | None, anomaly_limit: int) -> pd.DataFrame:
+    if anomaly_limit <= 0 or latest_hour is None:
+        return pd.DataFrame()
+
+    return safe_query(
+        TELEGRAM_DB,
+        """
+        SELECT
+            hour_bucket,
+            country,
+            event_type,
+            current_message_count,
+            current_unique_channels,
+            baseline_avg_messages,
+            baseline_std_messages,
+            baseline_avg_channels,
+            baseline_std_channels,
+            baseline_points,
+            spike_ratio,
+            channel_spike_ratio,
+            zscore_messages,
+            zscore_channels,
+            is_anomaly,
+            anomaly_reason,
+            computed_at
+        FROM telegram_hourly_anomalies
+        WHERE hour_bucket = ?
+          AND is_anomaly = 1
+        ORDER BY spike_ratio DESC, zscore_messages DESC, current_message_count DESC
+        LIMIT ?
+        """,
+        params=[latest_hour, anomaly_limit],
+    )
+
+
+def get_recent_clusters(cluster_window: str, cluster_level: str, cluster_limit: int) -> pd.DataFrame:
+    if cluster_limit <= 0:
+        return pd.DataFrame()
+
+    return safe_query(
+        TELEGRAM_DB,
+        """
+        SELECT
+            event_cluster_id,
+            event_type,
+            geo_group,
+            country,
+            location_key,
+            location_text,
+            cluster_start,
+            cluster_end,
+            message_count,
+            channels,
+            channel_count,
+            sample_text,
+            entities,
+            duration_seconds,
+            severity_score,
+            window_label,
+            cluster_level,
+            computed_at
+        FROM telegram_cluster_metrics_recent
+        WHERE window_label = ?
+          AND cluster_level = ?
+        ORDER BY severity_score DESC, cluster_start DESC
+        LIMIT ?
+        """,
+        params=[cluster_window, cluster_level, cluster_limit],
+    )
+
+
+def get_stock_alerts(stock_limit: int) -> pd.DataFrame:
+    if stock_limit <= 0:
+        return pd.DataFrame()
+
+    return safe_query(
+        MARKETS_DB,
+        """
+        SELECT *
+        FROM stock_alerts
+        ORDER BY date DESC
+        LIMIT ?
+        """,
+        params=[stock_limit],
+    )
+
+
+def get_earthquakes(earthquake_limit: int) -> pd.DataFrame:
+    if earthquake_limit <= 0:
+        return pd.DataFrame()
+
+    return safe_query(
+        EARTHQUAKE_DB,
+        """
+        SELECT
+            usgs_id,
+            title,
+            location,
+            type,
+            time,
+            updated_time,
+            magnitude,
+            depth_km,
+            latitude,
+            longitude
+        FROM usgs_earthquakes
+        ORDER BY time DESC
+        LIMIT ?
+        """,
+        params=[earthquake_limit],
+    )
+
+
 @router.get("/latest")
 def get_latest_intel(
-    cluster_window: str = Query("last_hour", pattern="^(last_hour|last_day|last_week)$"),
+    cluster_window: str = Query("last_hour", pattern="^(last_hour|last_day)$"),
     cluster_level: str = Query("location", pattern="^(location|country)$"),
-    anomaly_limit: int = Query(25, ge=1, le=200),
-    cluster_limit: int = Query(25, ge=1, le=200),
-    stock_limit: int = Query(25, ge=1, le=200),
-    earthquake_limit: int = Query(25, ge=1, le=200),
+    anomaly_limit: int = Query(25, ge=0, le=200),
+    cluster_limit: int = Query(25, ge=0, le=200),
+    stock_limit: int = Query(25, ge=0, le=200),
+    earthquake_limit: int = Query(25, ge=0, le=200),
 ):
     generated_at = datetime.now(timezone.utc).isoformat()
 
-    with get_connection(TELEGRAM_DB) as telegram_conn, get_connection(MARKET_DB) as market_conn, get_connection(MARKET_OSINT_DB) as osint_conn:
-        latest_hour_df = safe_query(
-            telegram_conn,
-            """
-            SELECT MAX(hour_bucket) AS latest_hour
-            FROM telegram_hourly_anomalies
-            """,
-        )
-        latest_hour = None
-        if not latest_hour_df.empty:
-            latest_hour = latest_hour_df.iloc[0]["latest_hour"]
-
-        hourly_anomalies = pd.DataFrame()
-        if latest_hour is not None:
-            hourly_anomalies = safe_query(
-                telegram_conn,
-                """
-                SELECT
-                    hour_bucket,
-                    country,
-                    event_type,
-                    current_message_count,
-                    current_unique_channels,
-                    baseline_avg_messages,
-                    baseline_std_messages,
-                    baseline_avg_channels,
-                    baseline_std_channels,
-                    baseline_points,
-                    spike_ratio,
-                    channel_spike_ratio,
-                    zscore_messages,
-                    zscore_channels,
-                    is_anomaly,
-                    anomaly_reason,
-                    computed_at
-                FROM telegram_hourly_anomalies
-                WHERE hour_bucket = ?
-                  AND is_anomaly = 1
-                ORDER BY
-                    spike_ratio DESC,
-                    zscore_messages DESC,
-                    current_message_count DESC
-                LIMIT ?
-                """,
-                params=[latest_hour, anomaly_limit],
-            )
-
-        recent_clusters = safe_query(
-            telegram_conn,
-            """
-            SELECT
-                event_cluster_id,
-                event_type,
-                geo_group,
-                country,
-                location_key,
-                location_text,
-                cluster_start,
-                cluster_end,
-                message_count,
-                channels,
-                channel_count,
-                sample_text,
-                entities,
-                duration_seconds,
-                severity_score,
-                window_label,
-                cluster_level,
-                computed_at
-            FROM telegram_cluster_metrics_recent
-            WHERE window_label = ?
-              AND cluster_level = ?
-            ORDER BY severity_score DESC, cluster_start DESC
-            LIMIT ?
-            """,
-            params=[cluster_window, cluster_level, cluster_limit],
-        )
-
-        stock_alerts = safe_query(
-            market_conn,
-            """
-            SELECT *
-            FROM stock_alerts
-            ORDER BY Date DESC
-            LIMIT ?
-            """,
-            params=[stock_limit],
-        )
-
-        earthquakes = safe_query(
-            osint_conn,
-            """
-            SELECT *
-            FROM usgs_earthquakes
-            ORDER BY time DESC
-            LIMIT ?
-            """,
-            params=[earthquake_limit],
-        )
+    latest_hour = get_latest_hour()
+    hourly_anomalies = get_hourly_anomalies(latest_hour, anomaly_limit)
+    recent_clusters = get_recent_clusters(cluster_window, cluster_level, cluster_limit)
+    stock_alerts = get_stock_alerts(stock_limit)
+    earthquakes = get_earthquakes(earthquake_limit)
 
     payload = {
         "generated_at": generated_at,
@@ -156,9 +224,10 @@ def get_latest_intel(
             "stock_alerts": len(stock_alerts),
             "earthquakes": len(earthquakes),
         },
-        "hourly_anomalies": hourly_anomalies.to_dict(orient="records"),
-        "recent_clusters": recent_clusters.to_dict(orient="records"),
-        "stock_alerts": stock_alerts.to_dict(orient="records"),
-        "earthquakes": earthquakes.to_dict(orient="records"),
+        "hourly_anomalies": clean_records(hourly_anomalies),
+        "recent_clusters": clean_records(recent_clusters),
+        "stock_alerts": clean_records(stock_alerts),
+        "earthquakes": clean_records(earthquakes),
     }
+
     return payload
