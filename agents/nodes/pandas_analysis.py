@@ -146,18 +146,15 @@ def run_pandas_ai(state: GraphState) -> GraphState:
         llm = PAIOpenAI(api_token=os.getenv("OPENAI_API_KEY"))
 
         plotly_instruction = """
-You are analyzing a pandas DataFrame containing normalized intelligence data.
+You are analyzing a single pandas DataFrame already loaded in memory.
 
-Rules:
-- Use Plotly only for charts.
-- Do NOT use matplotlib.
-- Do NOT use seaborn.
-- Prefer plotly.express unless lower-level Plotly is clearly needed.
-- If the user asks for a chart, graph, plot, or visualization, create it with Plotly.
-- Return a concise written summary along with the result.
-- If you generate a chart, save it instead of trying to display it inline.
-- The 'source' column distinguishes telegram clusters, telegram anomalies, stock alerts, and earthquakes.
-- Do not assume every column is populated for every source type.
+Important rules:
+- Do not write SQL.
+- Do not reference database tables.
+- Do not use table names such as usgs_earthquakes, stock_alerts, or telegram_hourly_anomalies.
+- Use only the columns available in the provided DataFrame.
+- If the user asks for a chart, use Plotly.
+- Return a concise written summary.
 """
 
         agent = Agent(
