@@ -128,8 +128,36 @@ def route_analysis_node(state: GraphState) -> GraphState:
 
 
 def route_analysis_edges(state: GraphState) -> str:
-    """Conditional edges: return the key for the next node."""
-    mode = state.get("analysis_mode", "intel_summary")
-    if mode in ["data_analysis", "visualization"]:
+    request_type = state.get("request_type", "latest_summary")
+
+    analysis_types = {
+        "earthquake_chart",
+        "stock_chart",
+        "data_analysis",
+        "visualization",
+    }
+
+    if request_type in analysis_types:
         return "pandas_ai"
+
     return "intel_path"
+
+def route_analysis(state: GraphState) -> str:
+    """
+    Decide whether this query should go to:
+    - pandas analysis path
+    - intel synthesis path
+    """
+    request_type = state.get("request_type", "latest_summary")
+
+    analysis_types = {
+        "earthquake_chart",
+        "stock_chart",
+        "data_analysis",
+        "visualization",
+    }
+
+    if request_type in analysis_types:
+        return "analysis"
+
+    return "intel"

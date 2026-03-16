@@ -2,7 +2,7 @@ from __future__ import annotations
 from langgraph.graph import StateGraph, START, END
 from dotenv import load_dotenv
 from pathlib import Path
-from agents.nodes.planning import parse_request, plan_queries, route_analysis_edges, route_analysis_node
+from agents.nodes.planning import parse_request, plan_queries, route_analysis_edges, route_analysis
 from agents.nodes.pandas_analysis import run_pandas_ai
 from agents.nodes.retrieval import retrieve_intel
 from agents.nodes.forecast import  forecast_implications
@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # -------------------------------------------------------------------
-# GRAPH BUILDER
+# GRAPH graph
 # -------------------------------------------------------------------
 
 def build_graph():
@@ -26,7 +26,6 @@ def build_graph():
 
     graph.add_node("parse_request", parse_request)
     graph.add_node("plan_queries", plan_queries)
-    graph.add_node("route_analysis", route_analysis_node)
     graph.add_node("retrieve_intel", retrieve_intel)
     graph.add_node("run_pandas_ai", run_pandas_ai)
     graph.add_node("fuse_findings", fuse_findings)
@@ -35,16 +34,17 @@ def build_graph():
 
     graph.add_edge(START, "parse_request")
     graph.add_edge("parse_request", "plan_queries")
-    graph.add_edge("plan_queries", "route_analysis")
+
     graph.add_conditional_edges(
-        "route_analysis",
+        "plan_queries",
         route_analysis_edges,
         {
             "intel_path": "retrieve_intel",
             "pandas_ai": "run_pandas_ai",
         },
     )
-    graph.add_edge("run_pandas_ai", END)
+
+    graph.add_edge("run_pandas_ai", "format_response")
     graph.add_edge("retrieve_intel", "fuse_findings")
     graph.add_edge("fuse_findings", "forecast_implications")
     graph.add_edge("forecast_implications", "format_response")
