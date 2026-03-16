@@ -29,6 +29,7 @@ def build_dataframe(retrieved: dict[str, Any]):
                 "title": None,
                 "symbol": None,
                 "magnitude": None,
+                "depth_km": None,
             }
         )
 
@@ -47,6 +48,7 @@ def build_dataframe(retrieved: dict[str, Any]):
                 "title": None,
                 "symbol": None,
                 "magnitude": None,
+                "depth_km": None,
             }
         )
 
@@ -65,6 +67,7 @@ def build_dataframe(retrieved: dict[str, Any]):
                 "title": item.get("company") or item.get("headline"),
                 "symbol": item.get("symbol"),
                 "magnitude": None,
+                "depth_km": None,
             }
         )
 
@@ -72,17 +75,18 @@ def build_dataframe(retrieved: dict[str, Any]):
         rows.append(
             {
                 "source": "earthquake",
-                "country": item.get("country"),
+                "country": None,
                 "event_type": "earthquake",
-                "severity": item.get("mag") or item.get("magnitude"),
+                "severity": item.get("magnitude"),
                 "ratio": None,
                 "message_count": None,
-                "location": item.get("place") or item.get("location"),
+                "location": item.get("location"),
                 "channels": None,
-                "timestamp": item.get("timestamp") or item.get("time"),
+                "timestamp": item.get("time"),
                 "title": item.get("title"),
                 "symbol": None,
-                "magnitude": item.get("mag") or item.get("magnitude"),
+                "magnitude": item.get("magnitude"),
+                "depth_km": item.get("depth_km"),
             }
         )
 
@@ -99,6 +103,7 @@ def build_dataframe(retrieved: dict[str, Any]):
         "title",
         "symbol",
         "magnitude",
+        "depth_km",
     ]
 
     if not rows:
