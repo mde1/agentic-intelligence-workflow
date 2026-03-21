@@ -101,44 +101,48 @@ def _build_anomaly_params(plan: dict[str, Any]) -> dict[str, Any]:
     return params
 
 def retrieve_intel(state: GraphState) -> GraphState:
-    plan = state.get("retrieval_plan", {}) or {}
-    sources_needed = set(plan.get("sources_needed", []))
+    plan = state.get("retrieval_plan", {})
+    countries = plan.get("countries", [])
+    event_types = plan.get("event_types", [])
 
-    use_recent_clusters = plan.get("use_recent_clusters", False)
-    use_hourly_anomalies = plan.get("use_hourly_anomalies", False)
-    use_stock_alerts = plan.get("use_stock_alerts", False)
-    use_earthquakes = plan.get("use_earthquakes", False)
-
-    telegram_data: dict[str, Any] = {}
-    markets_data: dict[str, Any] = {}
-    earthquakes_data: dict[str, Any] = {}
-
-    if "telegram" in sources_needed:
-        if use_recent_clusters:
-            telegram_data.update(fetch_telegram_recent(plan))
-        if use_hourly_anomalies:
-            telegram_data["hourly_anomalies"] = fetch_telegram_anomalies(plan)
-
-    if use_stock_alerts:
-        markets_data["stock_alerts"] = fetch_market_alerts()
-
-    if use_earthquakes:
-        earthquakes_data["events"] = fetch_earthquakes()
-
-    retrieved_data = {
-        "telegram": telegram_data,
-        "markets": markets_data,
-        "earthquakes": earthquakes_data,
-        "meta": {
-            "sources_used": sorted(
-                source for source, payload in {
-                    "telegram": telegram_data,
-                    "markets": markets_data,
-                    "earthquakes": earthquakes_data,
-                }.items()
-                if payload
-            )
-        },
+    retrieved = {
+        "intel_snapshot": {},
+        "hourly_anomalies": [],
     }
 
-    return {"retrieved_data": retrieved_data}
+    try:
+        retrieved["intel_snapshot"] = _get_json(
+            f"{INTEL_BASE_URL}/intel/latest",
+            params={
+                "cluster_window": plan.get("cluster_window", "last_hour"),
+                "cluster_level": plan.get("cluster_level", "location"),
+                "anomaly_limit": 25,
+                "cluster_limit": 25,
+                "stock_limit": 25,
+                "earthquake_limit": 25,
+            },
+        )
+    except Exception:
+        logger.exception("Failed calling /intel/latest")
+
+    anomaly_params: dict[str, Any] = {"anomalies_only": "true", "limit": 100}
+    if countries:
+        anomaly_params["country"] = countries[0]
+    if event_types:
+        anomaly_params["event_type"] = event_types[0]
+
+    try:
+        retrieved["hourly_anomalies"] = _get_json(
+            f"{INTEL_BASE_URL}/anomalies/hourly",
+            params=anomaly_params,
+        )
+    except Exception:
+        logger.exception("Failed calling /anomalies/hourly")
+
+    if not retrieved["intel_snapshot"] and not retrieved["hourly_anomalies"]:
+        return {
+            "retrieved_data": retrieved,
+            "final_report": "The API retrieval layer failed. Check api/routes/intel.py logs and DB paths."
+        }
+
+    return {"retrieved_data": retrieved}

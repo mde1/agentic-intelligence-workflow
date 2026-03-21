@@ -6,7 +6,6 @@ Your job:
 - identify the most important developments
 - prioritize signal over noise
 - use concrete metrics from the input
-- avoid speculation except for in the final forecasting paragraph
 - clearly state uncertainty
 - each judgement should include: assessment, key evidence, source types, confidence level
 - produce concise analyst-style judgements supported by evidence

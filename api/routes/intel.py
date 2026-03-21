@@ -192,42 +192,46 @@ def get_earthquakes(earthquake_limit: int) -> pd.DataFrame:
 
 @router.get("/latest")
 def get_latest_intel(
-    cluster_window: str = Query("last_hour", pattern="^(last_hour|last_day)$"),
+    cluster_window: str = Query("last_hour", pattern="^(last_hour|last_day|last_week)$"),
     cluster_level: str = Query("location", pattern="^(location|country)$"),
     anomaly_limit: int = Query(25, ge=0, le=200),
     cluster_limit: int = Query(25, ge=0, le=200),
     stock_limit: int = Query(25, ge=0, le=200),
     earthquake_limit: int = Query(25, ge=0, le=200),
 ):
-    generated_at = datetime.now(timezone.utc).isoformat()
+    try:
+        generated_at = datetime.now(timezone.utc).isoformat()
 
-    latest_hour = get_latest_hour()
-    hourly_anomalies = get_hourly_anomalies(latest_hour, anomaly_limit)
-    recent_clusters = get_recent_clusters(cluster_window, cluster_level, cluster_limit)
-    stock_alerts = get_stock_alerts(stock_limit)
-    earthquakes = get_earthquakes(earthquake_limit)
+        latest_hour = get_latest_hour()
+        hourly_anomalies = get_hourly_anomalies(latest_hour, anomaly_limit)
+        recent_clusters = get_recent_clusters(cluster_window, cluster_level, cluster_limit)
+        stock_alerts = get_stock_alerts(stock_limit)
+        earthquakes = get_earthquakes(earthquake_limit)
 
-    payload = {
-        "generated_at": generated_at,
-        "latest_hour": latest_hour,
-        "filters": {
-            "cluster_window": cluster_window,
-            "cluster_level": cluster_level,
-            "anomaly_limit": anomaly_limit,
-            "cluster_limit": cluster_limit,
-            "stock_limit": stock_limit,
-            "earthquake_limit": earthquake_limit,
-        },
-        "summary_counts": {
-            "hourly_anomalies": len(hourly_anomalies),
-            "recent_clusters": len(recent_clusters),
-            "stock_alerts": len(stock_alerts),
-            "earthquakes": len(earthquakes),
-        },
-        "hourly_anomalies": clean_records(hourly_anomalies),
-        "recent_clusters": clean_records(recent_clusters),
-        "stock_alerts": clean_records(stock_alerts),
-        "earthquakes": clean_records(earthquakes),
-    }
+        payload = {
+            "generated_at": generated_at,
+            "latest_hour": latest_hour,
+            "filters": {
+                "cluster_window": cluster_window,
+                "cluster_level": cluster_level,
+                "anomaly_limit": anomaly_limit,
+                "cluster_limit": cluster_limit,
+                "stock_limit": stock_limit,
+                "earthquake_limit": earthquake_limit,
+            },
+            "summary_counts": {
+                "hourly_anomalies": len(hourly_anomalies),
+                "recent_clusters": len(recent_clusters),
+                "stock_alerts": len(stock_alerts),
+                "earthquakes": len(earthquakes),
+            },
+            "hourly_anomalies": clean_records(hourly_anomalies),
+            "recent_clusters": clean_records(recent_clusters),
+            "stock_alerts": clean_records(stock_alerts),
+            "earthquakes": clean_records(earthquakes),
+        }
+        return payload
 
-    return payload
+    except Exception:
+        logger.exception("get_latest_intel failed")
+        raise
