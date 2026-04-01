@@ -19,69 +19,122 @@ SESSION_NAME = "telegram_session"
 DB_PATH = "db/telegram_channels.db"
 
 CHANNELS = [
+    # Iran/Resistance
     "TPOnow",
-    "me_observer_TG",
-    "rnintel",
-    "DDGeopolitics",
     "RezistanceTrench1",
-    "tabzlive",
+    "wc_israel",
+    "FotrosResistancee",
+    "LebUpdate",
     "presstv",
-    "wfwitness",
-    "idfofficial",
+    "RNN_Alerts",
+    "gaza911o",
+    "Irna_en",
+    "gazaalanpa",
+    "QudsNen",
+    
+    # Middle East
+    "me_observer_TG",
+    "aljazeera_world",
+    "thecradlemedia",
+    "SANANewsEnglish",
+    "ThePakistanNews",
+    "MiddleEastEye_TG",
+    "Kofia_News",
+
+    # World/War
+    "DDGeopolitics",
     "FrontlineReportNews",
     "ClashReport",
     "CIG_telegram",
-    "wc_israel",
-    "beholdisraelchannel",
-    "LebUpdate",
-    "FotrosResistancee",
-    "VigilantFox",
-    "TuckerCarlsonNetwork",
-    "thecradlemedia",
-    "SGTnewsNetwork",
-    "TheIslanderNews",
-    "GeoPWatch",
-    "OSINTWarfare",
-    "aljazeera_world",
-    "BellumActaNews",
-    "medmannews",
-    "gaza911o",
-    "ThePakistanNews",
-    "DocumentingIsrael",
-    "IntelRepublic",
-    "hnaftali",
-    "intelslava",
-    "NewsFromSudan",
-    "AssyriaNewsNetwork",
-    "kalibrated",
-    "sinembargomx",
     "wartimedia",
     "warmonitors",
+    "wfwitness",
+    "GeoPWatch",
+    "OSINTWarfare",
+    "nytimes",
+    "tabzlive",
+    "war_noir",
+    "tg301military",
+    "GeoIndian",
+    "intelligence_economique",
+    "trtworld",
+    "Journalyze",
+    "rnintel",
+    "BellumActaNews",
+    
+
+    
+    # Israel
+    "beholdisraelchannel",
+    "DocumentingIsrael",
+    "idfofficial",
+    "TheTimesOfIsrael2022",
+    "The_Jerusalem_Post",
+    "hnaftali",
+    "ILTVNews",
+    
+    # Africa
+    "sputnik_africa",
+    "NewsFromSudan",
+    "burkina24",
+    "Filsdusahell",
+    "SudanNewsEnglish",
+    
+    "VigilantFox",
+
+    "SGTnewsNetwork",
+    "TheIslanderNews",
+    
+    # Russia/Ukraine
+    "irinamar_Z",
+
+    
+    
+    "medmannews",
+
+    
+    "IntelRepublic",
+    "intelslava",
+
+
+    "AssyriaNewsNetwork",
+    "kalibrated",
+
+    # LATAM/Mexico
+    "sinembargomx",
+    "ElUniversalOnline",
     "ClaudiaSheinbaum",
+
+
     "irna_en",
     "SimurghRes",
     "AMK_MAPPING",
-    "tg301military",
     "News_of_Donbass",
     "Wor_mil_news",
     "AlHaqNews",
     "newrulesgeo", 
-    "NewsfromSudan",
-    "SANANewsEnglish",
+
+    
     "GeoIndian", 
     "internationalreporters_org",
-    "QudsNen",
+    
     "DeepStateUA",
     "DefenderDome",
     "KurdishFrontNews",
-    "war_noir",
+    
     "englishabuali",
-    "TheTimesOfIsrael2022",
-    "The_Jerusalem_Post",
+
     "ILTVnews",
-    "nytimes",
-    "MiddleEastEye_TG",
-    "trtworld",
+ 
+
+
+
+    # Cyber
+    "ctinow",
+    "cibsecurity",
+    "blueteamalerts",
+    "PentestingNews",
+
 ]
 
 # =========================
