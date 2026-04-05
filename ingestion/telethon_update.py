@@ -31,6 +31,8 @@ CHANNELS = [
     "Irna_en",
     "gazaalanpa",
     "QudsNen",
+    "SimurghRes",
+    "irna_en",
     
     # Middle East
     "me_observer_TG",
@@ -40,6 +42,9 @@ CHANNELS = [
     "ThePakistanNews",
     "MiddleEastEye_TG",
     "Kofia_News",
+    "AssyriaNewsNetwork",
+    "KurdishFrontNews",
+    "AlHaqNews",
 
     # World/War
     "DDGeopolitics",
@@ -61,8 +66,19 @@ CHANNELS = [
     "Journalyze",
     "rnintel",
     "BellumActaNews",
+    "SGTnewsNetwork",
+    "TheIslanderNews",
+    "GeoIndian", 
+    "internationalreporters_org",
+    "medmannews",
+    "IntelRepublic",
+    "kalibrated",
+    "VigilantFox",
+    "DefenderDome",
+    "AMK_MAPPING",
+    "Wor_mil_news",
+    "newrulesgeo",
     
-
     
     # Israel
     "beholdisraelchannel",
@@ -72,6 +88,7 @@ CHANNELS = [
     "The_Jerusalem_Post",
     "hnaftali",
     "ILTVNews",
+    "englishabuali",
     
     # Africa
     "sputnik_africa",
@@ -80,60 +97,26 @@ CHANNELS = [
     "Filsdusahell",
     "SudanNewsEnglish",
     
-    "VigilantFox",
-
-    "SGTnewsNetwork",
-    "TheIslanderNews",
     
     # Russia/Ukraine
     "irinamar_Z",
-
-    
-    
-    "medmannews",
-
-    
-    "IntelRepublic",
     "intelslava",
-
-
-    "AssyriaNewsNetwork",
-    "kalibrated",
+    "ukraine_watch",
+    "DeepStateUA",
+    "News_of_Donbass",
 
     # LATAM/Mexico
     "sinembargomx",
     "ElUniversalOnline",
     "ClaudiaSheinbaum",
 
-
-    "irna_en",
-    "SimurghRes",
-    "AMK_MAPPING",
-    "News_of_Donbass",
-    "Wor_mil_news",
-    "AlHaqNews",
-    "newrulesgeo", 
-
-    
-    "GeoIndian", 
-    "internationalreporters_org",
-    
-    "DeepStateUA",
-    "DefenderDome",
-    "KurdishFrontNews",
-    
-    "englishabuali",
-
-    "ILTVnews",
- 
-
-
-
     # Cyber
     "ctinow",
     "cibsecurity",
     "blueteamalerts",
     "PentestingNews",
+    "DarkfeedNews",
+    "breachforums_cdn"
 
 ]
 
@@ -151,12 +134,27 @@ patterns = [
     {"label": "GPE", "pattern": "Israel"},
     {"label": "GPE", "pattern": "Iran"},
     {"label": "GPE", "pattern": "Bahrain"},
+    {"label": "GPE", "pattern": "Iraq"},
+    {"label": "GPE", "pattern": "Syria"},
+    {"label": "GPE", "pattern": "Ukraine"},
+    {"label": "GPE", "pattern": "UAE"},
+    {"label": "GPE", "pattern": "Saudi Arabia"},
     {"label": "GPE", "pattern": "Kuwait"},
     {"label": "GPE", "pattern": "Lebanon"},
     {"label": "GPE", "pattern": "Gaza"},
     {"label": "GPE", "pattern": "Tel Aviv"},
+    {"label": "GPE", "pattern": "Ryadh"},
+    {"label": "GPE", "pattern": "Baghdad"},
+    {"label": "GPE", "pattern": "Basra"},
+    {"label": "GPE", "pattern": "Erbil"},
+    {"label": "GPE", "pattern": "Damascus"},
+    {"label": "GPE", "pattern": "Aleppo"},
+    {"label": "GPE", "pattern": "Dubai"},
+    {"label": "GPE", "pattern": "Abu Dhabi"},
+    {"label": "GPE", "pattern": "Sharjah"},
     {"label": "GPE", "pattern": "Jerusalem"},
     {"label": "GPE", "pattern": "Haifa"},
+    {"label": "GPE", "pattern": "Negev"},
     {"label": "GPE", "pattern": "Tehran"},
     {"label": "ORG", "pattern": "IDF"},
     {"label": "ORG", "pattern": "IRGC"},
@@ -169,6 +167,10 @@ patterns = [
     {"label": "WEAPON", "pattern": "Shahed drone"},
     {"label": "WEAPON", "pattern": "ballistic missile"},
     {"label": "WEAPON", "pattern": "cruise missile"},
+    {"label": "WEAPON", "pattern": "missile"},
+    {"label": "WEAPON", "pattern": "rocket"},
+    {"label": "WEAPON", "pattern": "raids"},
+    {"label": "WEAPON", "pattern": "bomb*"},
     {"label": "WEAPON", "pattern": "drone"},
     {"label": "WEAPON", "pattern": "UAV"},
     {"label": "SYSTEM", "pattern": "Iron Dome"},
@@ -351,8 +353,8 @@ def normalize_message_dt(value):
 
 EVENT_PATTERN = re.compile(
                         r"\b("
-                        r"impact|hit|strike|struck|interception|intercepted|"
-                        r"sirens?|explosion|explosions|drone|missile|rocket|launch|launched"
+                        r"impact|hit|strike|struck|interception|intercepted|fell|raids|bombing"
+                        r"sirens?|explosion|explosions|drone|missile|rocket|launch|launched|drones|missiles|rockets|fired"
                         r")\b",
                         re.IGNORECASE
                     )
@@ -369,7 +371,7 @@ def classify_event(text: str) -> str | None:
         return "siren"
     if "impact" in text or "hit" in text or "strike" in text or "struck" in text:
         return "impact"
-    if "launch" in text or "launched" in text:
+    if "launch" in text or "launched" or "raids" in text:
         return "launch"
     if "explosion" in text:
         return "explosion"

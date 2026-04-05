@@ -1716,3 +1716,249 @@ Recent alerts:
 Finished pipeline: Daily Pipeline
 ==============================
 All steps completed successfully.
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Wrote wide stock data to: db/StockData.xlsx
+Wrote long stock data to: db/StockData_long.xlsx
+Wrote stock alerts to: db/stockalerts.xlsx
+Wrote SQLite database to: db/market_data.db
+
+Sample stock prices:
+Ticker       Date        AAPL        AMZN  ...          WM        WMT         XOM
+0      2025-04-01  222.221466  192.169998  ...  230.300323  88.048706  115.085739
+1      2025-04-02  222.918427  196.009995  ...  231.058823  88.970520  114.728020
+2      2025-04-03  202.308243  178.410004  ...  233.294968  86.492516  108.695305
+3      2025-04-04  187.562531  171.000000  ...  221.838547  82.458313  100.874039
+4      2025-04-07  180.672562  175.259995  ...  217.267807  83.092690   99.520538
+
+[5 rows x 44 columns]
+
+Sample long-format prices:
+        Date Ticker       Price
+0 2025-04-01   AAPL  222.221466
+1 2025-04-02   AAPL  222.918427
+2 2025-04-03   AAPL  202.308243
+3 2025-04-04   AAPL  187.562531
+4 2025-04-07   AAPL  180.672562
+
+Recent alerts:
+         Date Ticker          Alert
+0  2026-03-30   AVAV  3-Day Decline
+1  2026-03-30     BA  3-Day Decline
+2  2026-03-30    CAT  3-Day Decline
+3  2026-03-30  GOOGL  3-Day Decline
+4  2026-03-30   INTC  3-Day Decline
+5  2026-03-30   LDOS  3-Day Decline
+6  2026-03-30    LHX  3-Day Decline
+7  2026-03-30     NU  3-Day Decline
+8  2026-03-30   NVDA  3-Day Decline
+9  2026-03-30   ORCL  3-Day Decline
+10 2026-03-30   PLTR  3-Day Decline
+11 2026-03-30    RTX  3-Day Decline
+12 2026-03-30   TSLA  3-Day Decline
+[OK] Stocks Update completed in 4.62s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Wrote wide stock data to: db/StockData.xlsx
+Wrote long stock data to: db/StockData_long.xlsx
+Wrote stock alerts to: db/stockalerts.xlsx
+Wrote SQLite database to: db/market_data.db
+
+Sample stock prices:
+Ticker       Date        AAPL        AMZN  ...          WM        WMT         XOM
+0      2025-04-02  222.918411  196.009995  ...  231.058853  88.970520  114.728020
+1      2025-04-03  202.308258  178.410004  ...  233.294983  86.492516  108.695305
+2      2025-04-04  187.562531  171.000000  ...  221.838547  82.458321  100.874039
+3      2025-04-07  180.672562  175.259995  ...  217.267792  83.092674   99.520538
+4      2025-04-08  171.671799  170.660004  ...  213.238861  81.070618   97.422630
+
+[5 rows x 44 columns]
+
+Sample long-format prices:
+        Date Ticker       Price
+0 2025-04-02   AAPL  222.918411
+1 2025-04-03   AAPL  202.308258
+2 2025-04-04   AAPL  187.562531
+3 2025-04-07   AAPL  180.672562
+4 2025-04-08   AAPL  171.671799
+
+Recent alerts:
+         Date Ticker          Alert
+0  2026-03-30   AVAV  3-Day Decline
+1  2026-03-30     BA  3-Day Decline
+2  2026-03-30    CAT  3-Day Decline
+3  2026-03-30  GOOGL  3-Day Decline
+4  2026-03-30   INTC  3-Day Decline
+5  2026-03-30   LDOS  3-Day Decline
+6  2026-03-30    LHX  3-Day Decline
+7  2026-03-30     NU  3-Day Decline
+8  2026-03-30   NVDA  3-Day Decline
+9  2026-03-30   ORCL  3-Day Decline
+10 2026-03-30   PLTR  3-Day Decline
+11 2026-03-30    RTX  3-Day Decline
+12 2026-03-30   TSLA  3-Day Decline
+13 2026-04-01    CVX  3-Day Decline
+14 2026-04-01    XOM     Spike/Drop
+[OK] Stocks Update completed in 6.27s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Wrote wide stock data to: db/StockData.xlsx
+Wrote long stock data to: db/StockData_long.xlsx
+Wrote stock alerts to: db/stockalerts.xlsx
+Wrote SQLite database to: db/market_data.db
+
+Sample stock prices:
+Ticker       Date        AAPL        AMZN  ...          WM        WMT         XOM
+0      2025-04-03  202.308273  178.410004  ...  233.294983  86.492516  108.695312
+1      2025-04-04  187.562531  171.000000  ...  221.838547  82.458313  100.874039
+2      2025-04-07  180.672562  175.259995  ...  217.267807  83.092682   99.520538
+3      2025-04-08  171.671799  170.660004  ...  213.238846  81.070610   97.422623
+4      2025-04-09  197.987091  191.100006  ...  221.070190  88.811928  102.285545
+
+[5 rows x 44 columns]
+
+Sample long-format prices:
+        Date Ticker       Price
+0 2025-04-03   AAPL  202.308273
+1 2025-04-04   AAPL  187.562531
+2 2025-04-07   AAPL  180.672562
+3 2025-04-08   AAPL  171.671799
+4 2025-04-09   AAPL  197.987091
+
+Recent alerts:
+         Date Ticker          Alert
+0  2026-03-30   AVAV  3-Day Decline
+1  2026-03-30     BA  3-Day Decline
+2  2026-03-30    CAT  3-Day Decline
+3  2026-03-30  GOOGL  3-Day Decline
+4  2026-03-30   INTC  3-Day Decline
+5  2026-03-30   LDOS  3-Day Decline
+6  2026-03-30    LHX  3-Day Decline
+7  2026-03-30     NU  3-Day Decline
+8  2026-03-30   NVDA  3-Day Decline
+9  2026-03-30   ORCL  3-Day Decline
+10 2026-03-30   PLTR  3-Day Decline
+11 2026-03-30    RTX  3-Day Decline
+12 2026-03-30   TSLA  3-Day Decline
+13 2026-04-01    CVX  3-Day Decline
+14 2026-04-01    CVX     Spike/Drop
+15 2026-04-01    XOM     Spike/Drop
+16 2026-04-02     PG  3-Day Decline
+17 2026-04-02    XOM  3-Day Decline
+[OK] Stocks Update completed in 6.04s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Wrote wide stock data to: db/StockData.xlsx
+Wrote long stock data to: db/StockData_long.xlsx
+Wrote stock alerts to: db/stockalerts.xlsx
+Wrote SQLite database to: db/market_data.db
+
+Sample stock prices:
+Ticker       Date        AAPL        AMZN  ...          WM        WMT         XOM
+0      2025-04-03  202.308258  178.410004  ...  233.294983  86.492516  108.695305
+1      2025-04-04  187.562531  171.000000  ...  221.838547  82.458313  100.874031
+2      2025-04-07  180.672562  175.259995  ...  217.267822  83.092682   99.520538
+3      2025-04-08  171.671799  170.660004  ...  213.238861  81.070625   97.422630
+4      2025-04-09  197.987091  191.100006  ...  221.070206  88.811928  102.285545
+
+[5 rows x 44 columns]
+
+Sample long-format prices:
+        Date Ticker       Price
+0 2025-04-03   AAPL  202.308258
+1 2025-04-04   AAPL  187.562531
+2 2025-04-07   AAPL  180.672562
+3 2025-04-08   AAPL  171.671799
+4 2025-04-09   AAPL  197.987091
+
+Recent alerts:
+        Date Ticker          Alert
+0 2026-04-01    CVX  3-Day Decline
+1 2026-04-01    CVX     Spike/Drop
+2 2026-04-01    XOM     Spike/Drop
+3 2026-04-02     PG  3-Day Decline
+4 2026-04-02    XOM  3-Day Decline
+[OK] Stocks Update completed in 6.24s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.
+
+==============================
+Starting pipeline: Daily Pipeline
+==============================
+
+=== Running: Stocks Update ===
+Script: /Users/michelleespinoza/Documents/GitHub/agentic-intelligence-workflow/ingestion/stocks_update.py
+Wrote wide stock data to: db/StockData.xlsx
+Wrote long stock data to: db/StockData_long.xlsx
+Wrote stock alerts to: db/stockalerts.xlsx
+Wrote SQLite database to: db/market_data.db
+
+Sample stock prices:
+Ticker       Date        AAPL        AMZN  ...          WM        WMT         XOM
+0      2025-04-03  202.308258  178.410004  ...  233.294952  86.492516  108.695305
+1      2025-04-04  187.562531  171.000000  ...  221.838547  82.458313  100.874031
+2      2025-04-07  180.672562  175.259995  ...  217.267792  83.092690   99.520538
+3      2025-04-08  171.671783  170.660004  ...  213.238861  81.070618   97.422630
+4      2025-04-09  197.987091  191.100006  ...  221.070190  88.811928  102.285545
+
+[5 rows x 44 columns]
+
+Sample long-format prices:
+        Date Ticker       Price
+0 2025-04-03   AAPL  202.308258
+1 2025-04-04   AAPL  187.562531
+2 2025-04-07   AAPL  180.672562
+3 2025-04-08   AAPL  171.671783
+4 2025-04-09   AAPL  197.987091
+
+Recent alerts:
+        Date Ticker          Alert
+0 2026-04-01    CVX  3-Day Decline
+1 2026-04-01    CVX     Spike/Drop
+2 2026-04-01    XOM     Spike/Drop
+3 2026-04-02     PG  3-Day Decline
+4 2026-04-02    XOM  3-Day Decline
+[OK] Stocks Update completed in 6.42s
+
+==============================
+Finished pipeline: Daily Pipeline
+==============================
+All steps completed successfully.
