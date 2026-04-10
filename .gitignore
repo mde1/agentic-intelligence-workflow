@@ -40,3 +40,6 @@ pandasai_quickstart_guide.ipynb
 
 # Slack Manifest
 slack_manifest.json
+
+# Logs
+.log
